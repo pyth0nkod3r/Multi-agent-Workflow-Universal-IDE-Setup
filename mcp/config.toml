@@ -1,0 +1,15 @@
+# Merge these blocks into C:\Users\ZION\.codex\config.toml.
+# Do not place tokens directly in this file.
+
+[mcp_servers.youdotcom]
+url = "https://api.you.com/mcp"
+
+# Enable after setting GOOGLE_STITCH_API_KEY to a newly issued key.
+[mcp_servers.google_stitch]
+url = "https://stitch.googleapis.com/mcp"
+env_http_headers = { "X-Goog-Api-Key" = "GOOGLE_STITCH_API_KEY" }
+
+# Penpot uses a short-lived, user-generated URL token. Add a fresh URL manually:
+# [mcp_servers.penpot]
+# url = "https://design.penpot.app/mcp/stream?userToken=<fresh-token>"
+
