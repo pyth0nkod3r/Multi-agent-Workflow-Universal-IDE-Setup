@@ -8,7 +8,7 @@
 
 [CmdletBinding()]
 param (
-    [string]$TargetWorkspace = (Resolve-Path "$PSScriptRoot\..\..").Path
+    [string]$TargetWorkspace = (Get-Item "$PSScriptRoot\..\..").FullName
 )
 
 $ErrorActionPreference = 'Stop'

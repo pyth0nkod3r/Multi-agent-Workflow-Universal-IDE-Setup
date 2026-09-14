@@ -1,66 +1,68 @@
-# RikkaHub-compatible Codex environment
-# RikkaHub-Compatible Agent Environment for VS Code
+# Multi-Agent Workflow — Universal IDE Setup
 
-This is a portable, repository-free counterpart to the mobile RikkaHub environment. It contains no handover credentials and does not clone or modify any project repository. The shared VS Code workspace adapters are installed beside this folder in `.agents/`, `.vscode/mcp.json`, `AGENTS.md`, `CLAUDE.md`, and `.github/copilot-instructions.md`.
-A universal, portable, project-independent configuration that replicates the mobile **RikkaHub Agent** environment across all VS Code agent harnesses: **Antigravity**, **Claude Code**, **GitHub Copilot / VS Code Agent Host**, **Codex**, and **Kilo Code**.
+A universal, portable, project-independent configuration that replicates the **Multi-Agent Workflow** across all VS Code agent harnesses: **Antigravity**, **Claude Code**, **GitHub Copilot / VS Code Agent Host**, **Codex**, and **Kilo Code**.
 
-## What is included
 ---
 
-- `AGENTS.md`: durable, project-independent working rules.
-- `skills/`: Codex skill packages for orchestration, design workflow, and the `uv` Python policy.
-- `agents/`: six reusable role prompts: planner, researcher, builder, critic, designer, and merger.
-- `mcp/config.toml`: safe Codex MCP configuration. You.com is ready; Google Stitch and Penpot require fresh user-owned credentials.
-- `tools/bootstrap.ps1`: an opt-in installer for `uv`, Firecrawl CLI, and Pencil CLI.
-## 🚀 One-Command Replication on Any Laptop
+## 🚀 One-Command Setup on Any Laptop
 
-## Harness coverage
 On any machine with VS Code and Git:
 
-- **Antigravity** automatically discovers the `.agents/rules`, `.agents/skills`, `.agents/agents`, and `.agents/mcp_config.json` adapters.
-- **VS Code Agent Host/Copilot** reads `.vscode/mcp.json`; use **MCP: List Servers** to approve and start the servers.
-- **Claude Code** reads the workspace `CLAUDE.md`; its global skill copies are installed separately.
-- **Codex** uses its global skills and MCP configuration, installed separately.
-- **Kilo Code and other agents** can follow the root `AGENTS.md` and the neutral source files in this directory.
 ```powershell
 # 1. Clone into your coding root or workspace
-git clone https://github.com/pyth0nkod3r/rikkahub-codex-environment.git
+git clone https://github.com/pyth0nkod3r/Multi-agent-Workflow-Universal-IDE-Setup.git
 
-## Install into Codex
 # 2. Run the one-shot setup script
-powershell -ExecutionPolicy Bypass -File .\rikkahub-codex-environment\tools\setup.ps1
+powershell -ExecutionPolicy Bypass -File .\Multi-agent-Workflow-Universal-IDE-Setup\tools\setup.ps1
 ```
 
-1. Copy `AGENTS.md` to the parent workspace where you want these rules to apply, or reference it from a workspace-specific `AGENTS.md`.
-2. Copy each directory in `skills/` to `C:\Users\ZION\.codex\skills\`.
-3. Merge the entries from `mcp/config.toml` into `C:\Users\ZION\.codex\config.toml`; do not replace the existing file.
-4. Set `GOOGLE_STITCH_API_KEY` only after you obtain a new valid key. Add the Penpot URL only after generating a new token; query-string MCP tokens are intentionally not stored here.
-5. In a new Codex chat, ask for `rikkahub-orchestration` when a task warrants the six-role workflow.
-This single command:
-1. Verifies/installs **`uv`** (ensuring the Python policy is active).
-2. Verifies Node.js & installs optional CLI tooling (`firecrawl-cli`, `@pen.dev/cli`).
-3. Deploys the **6 multi-agent roster roles** to Claude Code (`~/.claude/agents/`), Kilo Code (`.kilo/agents/`), and Antigravity (`.agents/agents/`).
-4. Syncs the core skills (`rikkahub-orchestration`, `ai-design-workflow`, `uv-default`) to Codex and workspace harnesses.
-5. Sets up universal MCP server configurations (`Youdotcom` active, `googleStitch` ready for key).
-6. Links the **Universal Orchestrator** contract so **any active agent automatically orchestrates multi-agent tasks**.
+Or run directly in one line:
+```powershell
+git clone https://github.com/pyth0nkod3r/Multi-agent-Workflow-Universal-IDE-Setup.git; powershell -ExecutionPolicy Bypass -File .\Multi-agent-Workflow-Universal-IDE-Setup\tools\setup.ps1
+```
 
-## Intentional exclusions
+### What This Single Command Automatically Executes:
+1. **Python Tooling (`uv`)**: Verifies/installs Astral's `uv` package manager (`uv`-by-default policy).
+2. **Global CLI Utilities**: Installs/updates `firecrawl-cli` and `@pen.dev/cli` globally via npm.
+3. **Multi-Agent Roster (v4 Code-Quality Gates)**: Deploys all 6 canonical roster roles (`planner`, `researcher`, `builder`, `critic`, `designer`, `merger`) to Claude Code (`~/.claude/agents/`), Antigravity (`.agents/agents/`), Kilo Code (`.kilo/agents/`), and Codex (`~/.codex/`).
+4. **Shared Skills & Knowledge**: Syncs core skills (`rikkahub-orchestration`, `ai-design-workflow`, `uv-default`) and knowledge modules (`code-quality.md`).
+5. **Universal MCP Server Configurations**: Sets up `Youdotcom` (active) and `googleStitch` (ready for key).
+6. **Universal Orchestrator Contract**: Links `AGENTS.md`, `CONTRACT.md`, and `ORCHESTRATION.md` so **whatever agent you talk to automatically acts as the Orchestrator**.
+
 ---
 
-All project repositories, Android-only tools, scheduled jobs, device automation, old handover secrets, and project-specific policies are excluded. Rotate the Firecrawl, Pencil, Stitch, and Penpot credentials exposed in the handover before any future use.
-## 🏛️ Architecture & Components
+## 🛡️ Code-Quality Gates v4 (7 Quality Floor Gates)
+
+All sub-agents operate under the v4 Code-Quality Gates:
+1. **Single Responsibility**: Every function does exactly one thing.
+2. **Flat Logic**: Guard clauses + early returns; nesting $\le$ 3 levels.
+3. **Arity**: $\le$ 3 parameters (Python $\le$ 4).
+4. **Error Handling**: Explicit path at every I/O boundary; zero silent swallowing.
+5. **No Hard-Coded Config / No Duplication**: Tokenized configs, shared helpers for repeated blocks.
+6. **Testability & Layering**: Inject external dependencies (SOLID-DIP).
+7. **Style Authority**: Strict formatter/linter rules (PEP 8, ruff, Google TS/JS style).
+
+---
+
+## 🏛️ Architecture & Directory Layout
 
 ```
-rikkahub-codex-environment/
-├── AGENTS.md                  # Durable workspace policies (uv, orchestration, design)
-├── ORCHESTRATOR.md            # Universal Orchestrator multi-agent protocol
-├── agents/                    # Canonical 6-role roster prompts
-│   ├── planner.md
-│   ├── researcher.md
+Multi-agent-Workflow-Universal-IDE-Setup/
+├── AGENTS.md                  # Durable workspace policies (uv, quality gates, design)
+├── CONTRACT.md                # Multi-agent triage contract & roster rules
+├── ORCHESTRATION.md            # Wave quality gating & recovery protocol
+├── README.md                  # Setup & architecture guide
+├── agents/                    # Canonical 6-role roster prompts (v4 quality floor)
 │   ├── builder.md
 │   ├── critic.md
 │   ├── designer.md
-│   └── merger.md
+│   ├── merger.md
+│   ├── planner.md
+│   └── researcher.md
+├── knowledge/                 # Workspace knowledge modules
+│   ├── code-quality.md        # Code-Quality Gates v4 reference
+│   ├── design-tokens.md       # Design system token references
+│   └── google-jobs-portal.md
 ├── skills/                    # Universal skill packages
 │   ├── rikkahub-orchestration/
 │   ├── ai-design-workflow/
@@ -79,17 +81,7 @@ rikkahub-codex-environment/
 
 Switching between agents during a project does not break orchestration:
 - **Disk-Anchored State**: Run plans live under `tasks/<runid>/` and results under `runs/<runid>/`.
-- **RESULT-LAST**: Sub-agents conclude with a validated `## Result` block.
-- **SUCCEEDED ≠ Done**: Orchestrator inspects disk changes rather than relying on status reports.
+- **VERIFY-BEFORE-WRITE**: Builders run QA commands before writing final `## Result` blocks.
+- **SUCCEEDED ≠ Done**: Orchestrator inspects actual disk changes rather than relying on status reports.
 - **Blind Critic Gate**: Independent verification against acceptance criteria; maximum 3 revision loops.
 - **Zero Fluff**: No agent-to-agent chatter; coordination occurs strictly through artifacts on disk.
-
----
-
-## 🔒 Security & Credentials
-
-This repository contains **zero secrets or credentials**.
-- **You.com MCP**: Ready out of the box (unauthenticated streamable HTTP).
-- **Google Stitch**: Provide `GOOGLE_STITCH_API_KEY` via your system environment variables.
-- **Penpot**: Connect on-demand from your active Penpot browser session.
-- **Firecrawl**: Export `FIRECRAWL_API_KEY` in your environment profile.
