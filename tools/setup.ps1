@@ -3,7 +3,7 @@
     One-shot setup script to configure RikkaHub Multi-Agent Dev Environment across VS Code harnesses.
 .DESCRIPTION
     Installs required tooling (uv, npm CLIs), configures VS Code MCP endpoints, seeds sub-agent roles
-    for Claude Code, Kilo Code, Antigravity, and Codex, and establishes shared workspace policies.
+    for Antigravity, Claude Code, Kilo Code, and Codex, and establishes shared workspace policies.
 #>
 
 [CmdletBinding()]
@@ -80,16 +80,70 @@ if (Test-Path $srcSkills) {
     Write-Host "[4/6] Shared skills synced to Codex ($codexSkillsDir)." -ForegroundColor Green
 }
 
-# 6. Configure Workspace Adapters in TargetWorkspace
+# 6. Configure Workspace Adapters in TargetWorkspace (Antigravity, Kilo Code, VS Code, Copilot)
 Write-Host "[5/6] Verifying workspace adapters in $TargetWorkspace..." -ForegroundColor Yellow
 
 $dotAgents = Join-Path $TargetWorkspace ".agents"
+$dotAgentsAgents = Join-Path $dotAgents "agents"
+$dotAgentsRules = Join-Path $dotAgents "rules"
+$dotAgentsSkills = Join-Path $dotAgents "skills"
 $dotKilo = Join-Path $TargetWorkspace ".kilo\agents"
 $dotVscode = Join-Path $TargetWorkspace ".vscode"
 
-New-Item -ItemType Directory -Force -Path $dotAgents, $dotKilo, $dotVscode | Out-Null
+New-Item -ItemType Directory -Force -Path $dotAgentsAgents, $dotAgentsRules, $dotAgentsSkills, $dotKilo, $dotVscode | Out-Null
 
-# Copy kilo agents
+# Antigravity agents
+foreach ($r in $roles) {
+    $src = Join-Path $envAgentsDir "$r.md"
+    if (Test-Path $src) {
+        $body = Get-Content -Raw $src
+        $antigravityContent = @"
+---
+name: $r
+description: RikkaHub-compatible $r role for structured multi-agent work.
+subagent: true
+mainAgent: false
+model: inherit
+commandExecutionPolicy: sandbox
+---
+
+$body
+"@
+        Set-Content -Path (Join-Path $dotAgentsAgents "$r.md") -Value $antigravityContent -Force
+    }
+}
+
+# Antigravity rules & skills & mcp
+$ruleFile = Join-Path $dotAgentsRules "rikkahub-environment.md"
+Set-Content -Path $ruleFile -Value @"
+# RikkaHub-compatible environment
+
+Read `rikkahub-codex-environment/AGENTS.md` and follow it as the common workspace policy. For multi-unit work, use the planner, researcher, builder, critic, designer, and merger definitions in `rikkahub-codex-environment/agents/`.
+"@ -Force
+
+if (Test-Path $srcSkills) {
+    Copy-Item -Recurse -Force "$srcSkills\*" $dotAgentsSkills
+}
+
+$antigravityMcp = Join-Path $dotAgents "mcp_config.json"
+Set-Content -Path $antigravityMcp -Value @"
+{
+  "mcpServers": {
+    "youdotcom": {
+      "serverUrl": "https://api.you.com/mcp"
+    },
+    "googleStitch": {
+      "serverUrl": "https://stitch.googleapis.com/mcp",
+      "disabled": true,
+      "headers": {
+        "X-Goog-Api-Key": "REPLACE_WITH_A_FRESH_KEY"
+      }
+    }
+  }
+}
+"@ -Force
+
+# Kilo Code agents
 foreach ($r in $roles) {
     $src = Join-Path $envAgentsDir "$r.md"
     if (Test-Path $src) {
