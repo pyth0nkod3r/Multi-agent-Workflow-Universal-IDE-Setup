@@ -14,6 +14,9 @@ param (
 $ErrorActionPreference = 'Stop'
 Write-Host "=== Setting up RikkaHub Multi-Agent Environment on: $TargetWorkspace ===" -ForegroundColor Cyan
 
+# Repo dir name (resolved dynamically so the generated references survive repo renames)
+$envRepoName = (Get-Item "$PSScriptRoot\..").Name
+
 # 1. Verify Prerequisites
 if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
     Write-Warning "Git is not installed or not in PATH. Please install Git."
@@ -118,7 +121,7 @@ $ruleFile = Join-Path $dotAgentsRules "rikkahub-environment.md"
 Set-Content -Path $ruleFile -Value @"
 # RikkaHub-compatible environment
 
-Read `rikkahub-codex-environment/AGENTS.md` and follow it as the common workspace policy. For multi-unit work, use the planner, researcher, builder, critic, designer, and merger definitions in `rikkahub-codex-environment/agents/`.
+Read $envRepoName/AGENTS.md and follow it as the common workspace policy. For multi-unit work, use the planner, researcher, builder, critic, designer, and merger definitions in $envRepoName/agents/.
 "@ -Force
 
 if (Test-Path $srcSkills) {
@@ -137,6 +140,13 @@ Set-Content -Path $antigravityMcp -Value @"
       "disabled": true,
       "headers": {
         "X-Goog-Api-Key": "REPLACE_WITH_A_FRESH_KEY"
+      }
+    },
+    "21stdev": {
+      "serverUrl": "https://21st.dev/api/mcp",
+      "disabled": true,
+      "headers": {
+        "x-api-key": "REPLACE_WITH_21ST_KEY"
       }
     }
   }
@@ -177,7 +187,7 @@ if (-not (Test-Path $rootClaudeTarget)) {
     Set-Content -Path $rootClaudeTarget -Value @"
 # Shared development environment
 
-Follow the durable, project-independent policy in `rikkahub-codex-environment/AGENTS.md`. Use the six role definitions in `rikkahub-codex-environment/agents/` for complex, parallel work. Do not apply project-specific product rules unless they are present in that project's own instructions.
+Follow the durable, project-independent policy in $envRepoName/AGENTS.md. Use the six role definitions in $envRepoName/agents/ for complex, parallel work. Do not apply project-specific product rules unless they are present in that project's own instructions.
 "@ -Force
 }
 
@@ -195,6 +205,13 @@ if (-not (Test-Path $rootMcpTarget)) {
       "url": "https://stitch.googleapis.com/mcp",
       "headers": {
         "X-Goog-Api-Key": "`${GOOGLE_STITCH_API_KEY}"
+      }
+    },
+    "21stdev": {
+      "type": "http",
+      "url": "https://21st.dev/api/mcp",
+      "headers": {
+        "x-api-key": "`${TWENTYFIRST_API_KEY}"
       }
     }
   }
