@@ -5,7 +5,7 @@ apps when active, any new repo). Source of authority for builder/critic/planner
 prompts (roster v4) and wave gating (ORCHESTRATION §B2). Full proposal +
 adoption rationale: /workspace/multiagent/proposals/20260914-code-quality-plan.md.
 
-## The 7 gates (builder floor; critic tags issues by gate number)
+## The 8 gates (builder floor; critic tags issues by gate number)
 
 1. **SINGLE RESPONSIBILITY** — every function does exactly one thing. 'and' test:
    can't describe it without "and" → split (calculateAndSaveInvoice →
@@ -35,6 +35,17 @@ adoption rationale: /workspace/multiagent/proposals/20260914-code-quality-plan.m
    existing convention (research: AI code drifts into non-standard naming).
    Prefer deleting/simplifying over adding when the spec allows — negative LOC
    is real productivity.
+8. **SECURITY-AUDIT BEFORE SUPPRESS** (user-set 22 Sept 2026) — every linter
+   error (ruff, eslint) is a potential zero-day until proven otherwise. BEFORE
+   adding any `# noqa`, per-file-ignore, or `// eslint-disable`: audit the rule
+   against the actual code. Is it a verified false positive (e.g. parameterized
+   SQL flagged as S608 injection, list-form subprocess flagged as S603)? Then
+   suppress WITH an inline comment explaining why. Is it a real vulnerability
+   (hardcoded credentials, unvalidated input, missing scheme check, partial
+   path resolution)? Then FIX IT — do not silence it. Builders: if QA shows a
+   ruff error, you must classify it (false-positive vs real) before your unit
+   can pass. Critics: flag any noqa/per-file-ignore that lacks a justifying
+   comment or that suppresses a rule without verifying it's a false positive.
 
 ## Process rules that make the gates real
 
@@ -101,3 +112,13 @@ merged with minimal review); GitClear 150M-LOC churn study; Uplevel 2024
 survey (96% concerned; 67% debug MORE with AI); arXiv 2512.05239 (SLR of bugs
 in AI-generated code, naming/consistency drift). Not adopted: hard line laws
 (5/20/30/40), 79-char as review argument, 20-line targets, error-level day one.
+
+## Gate 9 — SEC (security review, adopted 28 Sept 2026)
+- The critic runs a security checklist on every substantive diff, alongside gates 1-8. Checklists live in knowledge/security-checklists/ (api-security, auth-security, business-logic, code-review, mobile-apk-release) — distilled from elementalsouls/Claude-BugHunter (MIT+CC-BY), DEFENSIVE USE ONLY against our own products, never third parties.
+- Web/API diffs: run api-security.md + auth-security.md items (mass assignment, BOLA/IDOR ownership checks, function-level authz, data exposure, rate limiting, JWT validation). Business-logic changes: demand server-side validation test cases per business-logic.md. Mobile/APK releases: run mobile-apk-release.md as a release gate.
+- CI layer: gitleaks (blocking) + trivy (advisory) + Dependabot run in GitHub Actions (docs/security/README.md in the platform repo). CI findings follow the same rule as gate 8: every finding audited as a potential real vulnerability BEFORE suppression; suppression only for verified false positives with an inline comment.
+- Sensitive info in any artifact shared outside the repo (logs, reports, screenshots) must be redacted per evidence-hygiene practice (cookies, tokens, PII).
+- References: OWASP Top 10 2025, ASVS 5.0, API Security Top 10 (knowledge/security-resources.md).
+
+## Gate 10 — Git-commit provenance
+- Every commit message carries a `[run <runid>]` marker; builders never commit (orchestrator-only commits, serialized single writer); verify-before-fix (re-read target + git log before fixing — never re-apply a reverted fix); orphan commits (no marker) audited before trusted. Enforcement: `.githooks/commit-msg` (wire per-clone via `git config core.hooksPath .githooks`).

@@ -109,6 +109,11 @@ in-memory and NOT resumable. These rules make every run survivable:
   /workspace/multiagent/knowledge/code-quality.md. Rationale: 61% of
   agentic PRs are merged with minimal review (arXiv 2601.16839) — this
   check is the counter-gate.
+- **Git-commit hygiene (incident 6ac1e91)**:
+  1. Orchestrator-only commits (builders never git commit/push) — serialized single writer eliminates commit-ordering races + gives every commit provenance.
+  2. Orchestrator pre-commit protocol: `git fetch` + `git log HEAD..origin/main --oneline` (drift check) → re-read every file the commit touches → run the commit with [run <runid>] marker → push → verify remote HEAD moved. NEVER blind `git pull` on this device: all sessions share one working tree, parallel sessions almost always have uncommitted in-flight builder work, and a pull (merge/checkout) on a dirty tree is the wave-2 destructive-op incident class — pull ONLY if the drift check shows remote moved AND the working tree is clean.
+  3. Orphan-commit audit: any commit without a run-id marker gets audited (git show + cross-check against active runs) before it's trusted.
+  4. Incident audit trail: reference the 6ac1e91/cccff8f chain (wrong fix re-applied over fresher state; deployed stale; pooler rejected the options param) as the motivating case.
 
 ## C. Failure design (from MindStudio, adapted)
 

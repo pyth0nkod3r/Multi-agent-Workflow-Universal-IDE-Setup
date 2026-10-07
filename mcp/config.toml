@@ -13,3 +13,8 @@ env_http_headers = { "X-Goog-Api-Key" = "GOOGLE_STITCH_API_KEY" }
 # [mcp_servers.penpot]
 # url = "https://design.penpot.app/mcp/stream?userToken=<fresh-token>"
 
+
+# 21st.dev — component/theme catalog + templates (34 tools). Key: x-api-key header (user-supplied).
+[mcp_servers.21stdev]
+url = "https://21st.dev/api/mcp"
+env_http_headers = { "x-api-key" = "TWENTYFIRST_API_KEY" }
