@@ -25,8 +25,8 @@ git clone https://github.com/pyth0nkod3r/Multi-agent-Workflow-Universal-IDE-Setu
 1. **Python Tooling (`uv`)**: Verifies/installs Astral's `uv` package manager (`uv`-by-default policy).
 2. **Global CLI Utilities**: Installs/updates `firecrawl-cli` and `@pen.dev/cli` globally via npm.
 3. **Multi-Agent Roster (v4 Code-Quality Gates)**: Deploys all 6 canonical roster roles (`planner`, `researcher`, `builder`, `critic`, `designer`, `merger`) to Claude Code (`~/.claude/agents/`), Antigravity (`.agents/agents/`), Kilo Code (`.kilo/agents/`), and Codex (`~/.codex/`).
-4. **Shared Skills & Knowledge**: Syncs core skills (`rikkahub-orchestration`, `ai-design-workflow`, `uv-default`) and knowledge modules (`code-quality.md`).
-5. **Universal MCP Server Configurations**: Sets up `Youdotcom` (active) and `googleStitch` (ready for key).
+4. **Shared Skills & Knowledge**: Syncs the full portable skill set — `rikkahub-orchestration`, `ai-design-workflow`, `uv-default`, `uv-expert`, `python-via-uv`, `uv-script-workflow`, `repomix-explorer`, `freehire-search`, firecrawl ×12, neon ×7 — plus knowledge modules (`code-quality.md`, `security-checklists/`).
+5. **Universal MCP Server Configurations**: Sets up all four remote MCPs — `Youdotcom` (active), `googleStitch` (ready for key), `21stdev` (ready for key), `penpot` (needs a fresh per-machine URL token: Penpot → account → MCP).
 6. **Universal Orchestrator Contract**: Links `AGENTS.md`, `CONTRACT.md`, and `ORCHESTRATION.md` so **whatever agent you talk to automatically acts as the Orchestrator**.
 
 ---

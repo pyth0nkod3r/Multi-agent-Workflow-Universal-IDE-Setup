@@ -148,6 +148,10 @@ Set-Content -Path $antigravityMcp -Value @"
       "headers": {
         "x-api-key": "REPLACE_WITH_21ST_KEY"
       }
+    },
+    "penpot": {
+      "serverUrl": "https://design.penpot.app/mcp/stream?userToken=PASTE_FRESH_TOKEN_FROM_PENPOT",
+      "disabled": true
     }
   }
 }
@@ -213,6 +217,10 @@ if (-not (Test-Path $rootMcpTarget)) {
       "headers": {
         "x-api-key": "`${TWENTYFIRST_API_KEY}"
       }
+    },
+    "penpot": {
+      "type": "http",
+      "url": "https://design.penpot.app/mcp/stream?userToken=PASTE_FRESH_TOKEN_FROM_PENPOT"
     }
   }
 }
