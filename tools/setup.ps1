@@ -177,22 +177,13 @@ $body
     }
 }
 
-# Ensure root AGENTS.md, CLAUDE.md, and .mcp.json exist
+# Ensure root AGENTS.md and .mcp.json exist
 $rootAgentsSrc = "$PSScriptRoot\..\AGENTS.md"
 if (Test-Path $rootAgentsSrc) {
     $rootAgentsTarget = Join-Path $TargetWorkspace "AGENTS.md"
     if (-not (Test-Path $rootAgentsTarget)) {
         Copy-Item -Force $rootAgentsSrc $rootAgentsTarget
     }
-}
-
-$rootClaudeTarget = Join-Path $TargetWorkspace "CLAUDE.md"
-if (-not (Test-Path $rootClaudeTarget)) {
-    Set-Content -Path $rootClaudeTarget -Value @"
-# Shared development environment
-
-Follow the durable, project-independent policy in $envRepoName/AGENTS.md. Use the six role definitions in $envRepoName/agents/ for complex, parallel work. Do not apply project-specific product rules unless they are present in that project's own instructions.
-"@ -Force
 }
 
 $rootMcpTarget = Join-Path $TargetWorkspace ".mcp.json"
