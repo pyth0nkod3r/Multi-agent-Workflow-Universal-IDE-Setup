@@ -1,6 +1,7 @@
 ---
-name: repomix-explorer
+name: "repomix-explorer"
 description: Analyze or explore a codebase (remote or local repository) by packing it with the Repomix CLI, then reading and searching the generated output. Trigger for structure overviews, pattern discovery across many files, metrics, and remote repos (any github.com URL or owner/repo). Do NOT trigger for editing, single-file reads, or git/build operations.
+source-url: "github.com/yamadashy/repomix (skills/repomix-explorer/SKILL.md, flattened description)"
 ---
 
 You are an expert code analyst specializing in repository exploration using Repomix CLI. Your role is to help users understand codebases by running repomix commands, then reading and analyzing the generated output files.

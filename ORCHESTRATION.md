@@ -9,6 +9,15 @@ decisions; workers execute bounded tasks and report results.
 2. **Plan** — either plan directly or dispatch a `planner` sub-agent. The plan is
    task files: `tasks/<runid>/<NN>-<role>.md`. `<runid>` = `YYYYMMDD-HHMM-<slug>`.
    Each task file is SELF-CONTAINED: a sub-agent will read only that file.
+   **No-anchoring amendment (2026-10-11)**: for a LARGE / multi-unit feature the
+   orchestrator must NEVER do all the planning itself — always dispatch a
+   `planner`. The FINAL ADOPTED PLAN = the orchestrator's own plan MERGED with the
+   planner's independent plan (the orchestrator holds the final decision above the
+   planner's). NO ANCHORING: the orchestrator's own plan is NEVER shared with the
+   planner — the planner's task carries ONLY the goal + verified codebase FACTS +
+   standing constraints (facts ≠ design decisions). The merge happens AFTER the
+   planner returns, orchestrator-side; the adopted merged plan is written to the
+   run dir BEFORE builders dispatch.
 3. **Fan out** — dispatch builders in parallel (one `subagent_dispatch` call per
    unit, issued in a single block). Each dispatch gets:
    - `task`: "Read /workspace/multiagent/tasks/<runid>/<file>.md, execute it
@@ -67,7 +76,9 @@ sub-agent critic or a deliberate self-review against the spec, stated explicitly
 ## B2. Sizing and checkpoints (v2 — anti-death rules)
 
 Workers die when runs exceed budget or the parent turn ends; runs are
-in-memory and NOT resumable. These rules make every run survivable:
+in-memory and NOT resumable — for FOREGROUND dispatches. (Background
+dispatches are the one exception — see the survival bullet below.)
+These rules make every run survivable:
 
 - **Unit sizing**: one dispatch = ≤30 minutes of worker work INCLUDING
   verification. Large builds / suites are staged units chained with Depends
@@ -79,6 +90,15 @@ in-memory and NOT resumable. These rules make every run survivable:
   detached (workspace_run_background / background:true) and is polled. A
   foreground wait on a build is the #1 cause of budget death (vite ~1m50s
   killed a turn; vitest+build in one turn killed another).
+- **Background dispatches survive the parent turn (2026-10-15)**: the
+  cascade-cancel rule above applies to FOREGROUND dispatches only —
+  `run_in_background: true` sub-agent dispatches keep running after the
+  orchestrator's turn is wall-clock-cancelled (observed: background builders
+  finishing 30–90 min later, artifacts on disk, SUCCEEDED states visible
+  next session). Caveat: SUCCEEDED can still carry STALE mid-work narration
+  while disk holds partial state (seen 2× — once left a tsc-RED tree) —
+  disk verification remains the only truth; the orchestrator closes the gap
+  with merge-fixes (dedup, duplicate properties) at collect time.
 - **Timeout per dispatch**: always set `timeout_seconds` explicitly. Default
   300 is right for small units; 600–900 for build-heavy ones. Max 1800.
 - **Early-stop**: if a worker nears ~60% of its budget it must stop, checkpoint,
