@@ -1,0 +1,15 @@
+#!/bin/sh
+# commit-msg hook — Gate 10 (Git-commit provenance), from knowledge/code-quality.md
+# Every commit message carries a [run <runid>] marker; orphan commits (no marker)
+# are rejected. Wire per-clone: git config core.hooksPath .githooks
+
+msg=$(cat "$1")
+case "$msg" in
+  *"[run "*")"*) : ;;
+  *"[run "*) : ;;
+  *)
+    echo "COMMIT REJECTED (gate 10): commit message lacks a [run <runid>] marker." >&2
+    echo "Format: ... [run YYYYMMDD-HHMM-<slug>]. Orphan commits are audited before trusted." >&2
+    exit 1
+    ;;
+esac
