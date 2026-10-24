@@ -19,3 +19,4 @@ Later runs reference files here instead of re-researching.
 | wa-bot-landscape.md | WhatsApp bot landscape research (runs/wa-bot-research) | 2026-10 |
 | google-jobs-portal.md | Google Jobs portal scraping facts | — |
 | testgorilla-upskill.md | TestGorilla upskill notes | — |
+| research-doctrine.md | Research pipeline doctrine v1.0 (scoping → no-anchoring dispatch → escalation ladder → per-claim ADOPT/VERIFY/REJECT → artifacts → absorption) + academic/non-academic source maps — user-adopted 2026-10-24 | 2026-10-24 |
