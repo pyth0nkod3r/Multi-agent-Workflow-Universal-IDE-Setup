@@ -43,3 +43,13 @@ Vectors that allow attackers to guess credentials or map out valid users.
   - Is user enumeration prevented? (e.g., "If this email exists, a reset link has been sent" vs "Email not found" differential responses).
   - Is there a strict account lockout or throttling mechanism (e.g., IP-based and account-based rate limiting) after 5-10 failed login attempts?
 - [ ] **Severity:** MEDIUM to HIGH.
+
+## 7. Tenant / Row Isolation (added 26 Oct 2026)
+- [ ] **Rule:** Authorization for multi-user data enforced at the DATABASE layer (Postgres RLS or equivalent policy) — never by developers remembering a WHERE clause. Tenant/user id travels in signed claims, never a client-supplied switch.
+- [ ] **Verify:** Standing leakage probe passes: authenticated user A cannot read or mutate user B's rows via ANY route (API, exports, background jobs).
+- [ ] **Severity:** CRITICAL.
+
+## 8. Credential Hashing (added 26 Oct 2026)
+- [ ] **Rule:** Passwords use a slow, salted scheme (argon2 / bcrypt / scrypt / pbkdf2_hmac). NEVER plain sha256(password); NEVER persist Python's built-in `hash()` as an identifier (SipHash, per-process seeded — unstable by design).
+- [ ] **Verify:** Stable digests use hashlib.sha256; secrets use an argon2-class scheme; no hashlib-only password paths in the diff.
+- [ ] **Severity:** CRITICAL.

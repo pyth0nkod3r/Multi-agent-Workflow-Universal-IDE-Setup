@@ -54,3 +54,8 @@ Lack of limits on how often an API can be called or how much data it can request
 - [ ] **Look for:** Login, password reset, or data-export endpoints without rate limit decorators.
 - [ ] **Verify:** Is there a strict rate limit applied? Are pagination limits enforced (e.g., max 100 items per page) to prevent DoS via GraphQL or OData `$expand`/`$filter`?
 - [ ] **Severity:** MEDIUM.
+
+## 7. Atomic Rate-Limit & Counter Primitives (added 26 Oct 2026)
+- [ ] **Look for:** App-level check-then-act on shared counters: GET remaining → check > 0 → DECR (two concurrent requests read the same snapshot and both pass the check).
+- [ ] **Verify:** Check-and-decrement happens atomically in ONE primitive — Redis Lua script, INCR+EXPIRE pipeline, or a conditional DB update. Same rule applies to any read-modify-write of shared state.
+- [ ] **Severity:** HIGH.
