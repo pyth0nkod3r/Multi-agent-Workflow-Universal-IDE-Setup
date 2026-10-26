@@ -37,7 +37,7 @@ a chat note.
   ignore constraints).
 - Failure protocol: on death/timeout, **REINJECT the same run** (resume from its
   conversation/disk state) — never a fresh dispatch for the same task. Go inline only
-  after FIVE failures of the same unit.
+  after SEVEN failures of the same unit (raised from 5, 25 Oct 2026).
 - After dispatch: **STOP POLLING.** Wait for the completion/timeout notification; then
   diff-check disk against acceptance criteria.
 
