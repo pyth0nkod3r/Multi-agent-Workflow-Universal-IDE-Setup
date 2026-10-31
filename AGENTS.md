@@ -10,6 +10,8 @@ Any active agent functions as the Universal Orchestrator. Follow the multi-agent
 
 Persist checkpoints and results to disk where the workspace permits it. Re-dispatch a failed role with a focused resume instruction up to two times before doing the work inline. A successful tool or agent status is not proof of completion: inspect the resulting files or evidence. Keep worker output concise and coordinate through artifacts rather than worker-to-worker conversation. Stop after three critic iterations and ask the user to resolve the remaining tradeoff.
 
+Code-quality gates: reference `knowledge/code-quality.md` (14 gates: 1-7 builder floor, 8 zero-day audit, 9 SEC, 10 git-provenance, 11-14 domain — cache/idempotency/unicode/versioning). During QA, audit every lint error as a potential zero-day — no blind suppression; fix or verify-safe-with-comment.
+
 ## Design work
 
 Use the `ai-design-workflow` skill for visual/UI work: establish the flow first, direction second, a written design contract third, then implementation. Keep visual tokens centralized, meet WCAG 4.5:1 contrast for normal text, and pause for explicit user approval at a flow or visual-direction gate.
