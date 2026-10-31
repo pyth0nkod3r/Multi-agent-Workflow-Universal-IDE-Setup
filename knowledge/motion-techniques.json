@@ -1,0 +1,5515 @@
+{
+ "source": "https://oneshotprompts.com/techniques/",
+ "retrieved": "2026-10-31",
+ "what": "Full index of all 923 oneshotprompts motion design techniques, grouped by kind -> subgroup. Each technique: id (use in prompts as {id}), name, live (has live example). One-sentence definitions: fetch https://oneshotprompts.com/techniques/<id>/ on demand (or check the site's 'Say it in plain words' aliases).",
+ "usage": "Search this file (grep by name or id) to pick techniques for a motion spec; cite ids in the project's MOTION.md written in the oneshot text format (## Scene (3s) lines, - steps, [blanks], [words]{term-id} links, {term-id|strength=|speed=|when=|on=} settings). Format spec: https://oneshotprompts.com/llms.txt",
+ "goals": [
+  {
+   "name": "App demo",
+   "description": "Show how your product works",
+   "count": 103
+  },
+  {
+   "name": "Logo intro",
+   "description": "Make your logo arrive",
+   "count": 30
+  },
+  {
+   "name": "Titles & text",
+   "description": "Headlines, captions, kinetic type",
+   "count": 57
+  },
+  {
+   "name": "Data & numbers",
+   "description": "Charts, counters and explainers",
+   "count": 80
+  },
+  {
+   "name": "Social post",
+   "description": "Short, punchy and celebratory",
+   "count": 27
+  },
+  {
+   "name": "Scene changes",
+   "description": "Cut, wipe or morph between scenes",
+   "count": 84
+  },
+  {
+   "name": "Backgrounds",
+   "description": "Calm loops behind everything",
+   "count": 51
+  },
+  {
+   "name": "Retro & glitch",
+   "description": "VHS, CRT, pixels and noise",
+   "count": 50
+  }
+ ],
+ "kinds": [
+  {
+   "kind": "Principles & timing",
+   "count": 101,
+   "subgroups": [
+    {
+     "subgroup": "Classic principles",
+     "techniques": [
+      {
+       "id": "follow-through",
+       "name": "Follow Through",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Cycles & loops",
+     "techniques": [
+      {
+       "id": "breathing-idle",
+       "name": "Breathing Idle",
+       "live": true
+      },
+      {
+       "id": "flipbook-sprite-animation",
+       "name": "Flipbook Sprite Animation",
+       "live": true
+      },
+      {
+       "id": "hop-cycle",
+       "name": "Hop Cycle",
+       "live": true
+      },
+      {
+       "id": "idle-float-bob",
+       "name": "Idle Float Bob",
+       "live": true
+      },
+      {
+       "id": "ping-pong-loop",
+       "name": "Ping-Pong Loop",
+       "live": true
+      },
+      {
+       "id": "run-cycle",
+       "name": "Run Cycle",
+       "live": true
+      },
+      {
+       "id": "seamless-loop",
+       "name": "Seamless Loop",
+       "live": true
+      },
+      {
+       "id": "walk-cycle",
+       "name": "Walk Cycle",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Disney principles",
+     "techniques": [
+      {
+       "id": "anticipation",
+       "name": "Anticipation",
+       "live": true
+      },
+      {
+       "id": "appeal",
+       "name": "Appeal",
+       "live": true
+      },
+      {
+       "id": "arcs",
+       "name": "Arcs",
+       "live": true
+      },
+      {
+       "id": "exaggeration",
+       "name": "Exaggeration",
+       "live": true
+      },
+      {
+       "id": "overlapping-action",
+       "name": "Overlapping Action",
+       "live": true
+      },
+      {
+       "id": "secondary-action",
+       "name": "Secondary Action",
+       "live": true
+      },
+      {
+       "id": "slow-in-and-slow-out",
+       "name": "Slow In and Slow Out",
+       "live": true
+      },
+      {
+       "id": "solid-drawing",
+       "name": "Solid Drawing",
+       "live": true
+      },
+      {
+       "id": "squash-and-stretch",
+       "name": "Squash and Stretch",
+       "live": true
+      },
+      {
+       "id": "staging",
+       "name": "Staging",
+       "live": true
+      },
+      {
+       "id": "timing",
+       "name": "Timing",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Easing",
+     "techniques": [
+      {
+       "id": "bounce-ease-in",
+       "name": "Bounce Ease In",
+       "live": true
+      },
+      {
+       "id": "bounce-ease-out",
+       "name": "Bounce Ease Out",
+       "live": true
+      },
+      {
+       "id": "custom-cubic-bezier-easing",
+       "name": "Custom Cubic-Bezier Easing",
+       "live": true
+      },
+      {
+       "id": "ease-in-back",
+       "name": "Ease In Back",
+       "live": true
+      },
+      {
+       "id": "ease-in-circ",
+       "name": "Ease In Circ",
+       "live": true
+      },
+      {
+       "id": "ease-in-cubic",
+       "name": "Ease In Cubic",
+       "live": true
+      },
+      {
+       "id": "ease-in-expo",
+       "name": "Ease In Expo",
+       "live": true
+      },
+      {
+       "id": "ease-in-quad",
+       "name": "Ease In Quad",
+       "live": true
+      },
+      {
+       "id": "ease-in-sine",
+       "name": "Ease In Sine",
+       "live": true
+      },
+      {
+       "id": "ease-in-out-back",
+       "name": "Ease In-Out Back",
+       "live": true
+      },
+      {
+       "id": "ease-in-out-cubic",
+       "name": "Ease In-Out Cubic",
+       "live": true
+      },
+      {
+       "id": "ease-in-out-expo",
+       "name": "Ease In-Out Expo",
+       "live": true
+      },
+      {
+       "id": "ease-in-out-quad",
+       "name": "Ease In-Out Quad",
+       "live": true
+      },
+      {
+       "id": "ease-in-out-quint",
+       "name": "Ease In-Out Quint",
+       "live": true
+      },
+      {
+       "id": "ease-in-out-sine",
+       "name": "Ease In-Out Sine",
+       "live": true
+      },
+      {
+       "id": "ease-out-back",
+       "name": "Ease Out Back",
+       "live": true
+      },
+      {
+       "id": "ease-out-circ",
+       "name": "Ease Out Circ",
+       "live": true
+      },
+      {
+       "id": "ease-out-cubic",
+       "name": "Ease Out Cubic",
+       "live": true
+      },
+      {
+       "id": "ease-out-expo",
+       "name": "Ease Out Expo",
+       "live": true
+      },
+      {
+       "id": "ease-out-quad",
+       "name": "Ease Out Quad",
+       "live": true
+      },
+      {
+       "id": "ease-out-quart",
+       "name": "Ease Out Quart",
+       "live": true
+      },
+      {
+       "id": "ease-out-sine",
+       "name": "Ease Out Sine",
+       "live": true
+      },
+      {
+       "id": "elastic-ease-in",
+       "name": "Elastic Ease In",
+       "live": true
+      },
+      {
+       "id": "elastic-ease-out",
+       "name": "Elastic Ease Out",
+       "live": true
+      },
+      {
+       "id": "linear-easing",
+       "name": "Linear Easing",
+       "live": true
+      },
+      {
+       "id": "steps-easing",
+       "name": "Steps Easing",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Physics",
+     "techniques": [
+      {
+       "id": "air-drag",
+       "name": "Air Drag",
+       "live": true
+      },
+      {
+       "id": "ball-bounce",
+       "name": "Ball Bounce",
+       "live": true
+      },
+      {
+       "id": "chain-follow-through",
+       "name": "Chain Follow-Through",
+       "live": true
+      },
+      {
+       "id": "critically-damped-spring",
+       "name": "Critically Damped Spring",
+       "live": true
+      },
+      {
+       "id": "friction-deceleration",
+       "name": "Friction Deceleration",
+       "live": true
+      },
+      {
+       "id": "gravity-drop",
+       "name": "Gravity Drop",
+       "live": true
+      },
+      {
+       "id": "impact",
+       "name": "Impact",
+       "live": true
+      },
+      {
+       "id": "inertia",
+       "name": "Inertia",
+       "live": true
+      },
+      {
+       "id": "jiggle",
+       "name": "Jiggle",
+       "live": true
+      },
+      {
+       "id": "magnetic-snap",
+       "name": "Magnetic Snap",
+       "live": true
+      },
+      {
+       "id": "orbit",
+       "name": "Orbit",
+       "live": true
+      },
+      {
+       "id": "oscillation",
+       "name": "Oscillation",
+       "live": true
+      },
+      {
+       "id": "overdamped-spring",
+       "name": "Overdamped Spring",
+       "live": true
+      },
+      {
+       "id": "pendulum-swing",
+       "name": "Pendulum Swing",
+       "live": true
+      },
+      {
+       "id": "perlin-noise-drift",
+       "name": "Perlin Noise Drift",
+       "live": true
+      },
+      {
+       "id": "projectile-arc",
+       "name": "Projectile Arc",
+       "live": true
+      },
+      {
+       "id": "recoil",
+       "name": "Recoil",
+       "live": true
+      },
+      {
+       "id": "rubber-band-snap",
+       "name": "Rubber Band Snap",
+       "live": true
+      },
+      {
+       "id": "settle",
+       "name": "Settle",
+       "live": true
+      },
+      {
+       "id": "shake",
+       "name": "Shake",
+       "live": true
+      },
+      {
+       "id": "soft-body-jelly",
+       "name": "Soft Body Jelly",
+       "live": true
+      },
+      {
+       "id": "spring-motion",
+       "name": "Spring Motion",
+       "live": true
+      },
+      {
+       "id": "underdamped-spring",
+       "name": "Underdamped Spring",
+       "live": true
+      },
+      {
+       "id": "wobble",
+       "name": "Wobble",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Principle sub-techniques",
+     "techniques": [
+      {
+       "id": "delay",
+       "name": "Delay",
+       "live": true
+      },
+      {
+       "id": "hold",
+       "name": "Hold",
+       "live": true
+      },
+      {
+       "id": "moving-hold",
+       "name": "Moving Hold",
+       "live": true
+      },
+      {
+       "id": "multiples",
+       "name": "Multiples",
+       "live": true
+      },
+      {
+       "id": "offset",
+       "name": "Offset",
+       "live": true
+      },
+      {
+       "id": "on-ones-on-twos-on-threes",
+       "name": "On Ones, On Twos, On Threes",
+       "live": true
+      },
+      {
+       "id": "smear-frame",
+       "name": "Smear Frame",
+       "live": true
+      },
+      {
+       "id": "volume-preservation",
+       "name": "Volume Preservation",
+       "live": true
+      },
+      {
+       "id": "weight-and-mass",
+       "name": "Weight and Mass",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Stagger",
+     "techniques": [
+      {
+       "id": "center-out-stagger",
+       "name": "Center-Out Stagger",
+       "live": true
+      },
+      {
+       "id": "eased-stagger",
+       "name": "Eased Stagger",
+       "live": true
+      },
+      {
+       "id": "edge-in-stagger",
+       "name": "Edge-In Stagger",
+       "live": true
+      },
+      {
+       "id": "grid-diagonal-stagger",
+       "name": "Grid Diagonal Stagger",
+       "live": true
+      },
+      {
+       "id": "linear-stagger",
+       "name": "Linear Stagger",
+       "live": true
+      },
+      {
+       "id": "proximity-stagger",
+       "name": "Proximity Stagger",
+       "live": true
+      },
+      {
+       "id": "radial-stagger",
+       "name": "Radial Stagger",
+       "live": true
+      },
+      {
+       "id": "random-stagger",
+       "name": "Random Stagger",
+       "live": true
+      },
+      {
+       "id": "wave-stagger",
+       "name": "Wave Stagger",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Time remapping",
+     "techniques": [
+      {
+       "id": "bullet-time",
+       "name": "Bullet Time",
+       "live": true
+      },
+      {
+       "id": "frame-interpolation",
+       "name": "Frame Interpolation",
+       "live": true
+      },
+      {
+       "id": "freeze-frame",
+       "name": "Freeze Frame",
+       "live": true
+      },
+      {
+       "id": "hitstop",
+       "name": "Hitstop",
+       "live": true
+      },
+      {
+       "id": "retiming",
+       "name": "Retiming",
+       "live": true
+      },
+      {
+       "id": "reverse-playback",
+       "name": "Reverse Playback",
+       "live": true
+      },
+      {
+       "id": "slow-motion",
+       "name": "Slow Motion",
+       "live": true
+      },
+      {
+       "id": "speed-ramp",
+       "name": "Speed Ramp",
+       "live": true
+      },
+      {
+       "id": "time-remapping",
+       "name": "Time Remapping",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Timing & spacing",
+     "techniques": [
+      {
+       "id": "asymmetric-fast-in-slow-out",
+       "name": "Asymmetric easing",
+       "live": true
+      },
+      {
+       "id": "distance-based-duration",
+       "name": "Distance-Based Duration",
+       "live": true
+      },
+      {
+       "id": "interruptible-motion",
+       "name": "Interruptible Motion",
+       "live": true
+      },
+      {
+       "id": "velocity-preserving-retarget",
+       "name": "Velocity-Preserving Retarget",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Typography",
+   "count": 112,
+   "subgroups": [
+    {
+     "subgroup": "Counting",
+     "techniques": [
+      {
+       "id": "decimal-counter-with-formatting",
+       "name": "Decimal counter with formatting",
+       "live": true
+      },
+      {
+       "id": "number-count-down",
+       "name": "Number count-down",
+       "live": true
+      },
+      {
+       "id": "number-count-up",
+       "name": "Number count-up",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Credits and crawls",
+     "techniques": [
+      {
+       "id": "perspective-crawl",
+       "name": "Perspective crawl",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Depth and 3D",
+     "techniques": [
+      {
+       "id": "3d-word-cube",
+       "name": "3D word cube",
+       "live": true
+      },
+      {
+       "id": "accordion-fold-text",
+       "name": "Accordion fold text",
+       "live": true
+      },
+      {
+       "id": "character-3d-flip",
+       "name": "Character 3D flip",
+       "live": true
+      },
+      {
+       "id": "extrusion-depth-reveal",
+       "name": "Extrusion depth reveal",
+       "live": true
+      },
+      {
+       "id": "parallax-letter-layers",
+       "name": "Parallax letter layers",
+       "live": true
+      },
+      {
+       "id": "perspective-tunnel-type",
+       "name": "Perspective tunnel type",
+       "live": true
+      },
+      {
+       "id": "text-reflection-shimmer",
+       "name": "Text reflection shimmer",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Glitch and distortion",
+     "techniques": [
+      {
+       "id": "glitch-text",
+       "name": "Glitch text",
+       "live": true
+      },
+      {
+       "id": "neon-flicker",
+       "name": "Neon flicker",
+       "live": true
+      },
+      {
+       "id": "pixel-sort-text",
+       "name": "Pixel sort text",
+       "live": true
+      },
+      {
+       "id": "rgb-channel-split",
+       "name": "RGB channel split",
+       "live": true
+      },
+      {
+       "id": "scanline-tear",
+       "name": "Scanline tear",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Glyph swaps",
+     "techniques": [
+      {
+       "id": "ascii-glyph-density-reveal",
+       "name": "ASCII glyph density reveal",
+       "live": true
+      },
+      {
+       "id": "emoji-substitution",
+       "name": "Emoji substitution",
+       "live": true
+      },
+      {
+       "id": "glyph-cycling",
+       "name": "Glyph cycling",
+       "live": true
+      },
+      {
+       "id": "symbol-to-letter-decode",
+       "name": "Symbol-to-letter decode",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Layout and poster",
+     "techniques": [
+      {
+       "id": "grid-reflow-shuffle",
+       "name": "Grid reflow shuffle",
+       "live": true
+      },
+      {
+       "id": "kinetic-poster-layout",
+       "name": "Kinetic poster layout",
+       "live": true
+      },
+      {
+       "id": "stacked-line-build",
+       "name": "Stacked line build",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Liquid and organic",
+     "techniques": [
+      {
+       "id": "liquid-melt",
+       "name": "Liquid melt",
+       "live": true
+      },
+      {
+       "id": "metaball-goo-text",
+       "name": "Metaball goo text",
+       "live": true
+      },
+      {
+       "id": "noise-field-warp",
+       "name": "Noise field warp",
+       "live": true
+      },
+      {
+       "id": "ripple-displacement",
+       "name": "Ripple displacement",
+       "live": true
+      },
+      {
+       "id": "twirl-warp-text",
+       "name": "Twirl warp text",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Looping and marquee",
+     "techniques": [
+      {
+       "id": "parallax-marquee-rows",
+       "name": "Parallax marquee rows",
+       "live": true
+      },
+      {
+       "id": "scrolling-led-marquee-text",
+       "name": "Scrolling LED marquee text",
+       "live": true
+      },
+      {
+       "id": "word-carousel-rotate",
+       "name": "Word carousel rotate",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Lyrics and captions",
+     "techniques": [
+      {
+       "id": "bouncing-ball-word-marker",
+       "name": "Bouncing ball word marker",
+       "live": true
+      },
+      {
+       "id": "karaoke-highlight-sweep",
+       "name": "Karaoke highlight sweep",
+       "live": true
+      },
+      {
+       "id": "kinetic-lyric-typography",
+       "name": "Kinetic lyric typography",
+       "live": true
+      },
+      {
+       "id": "lyric-line-crossfade",
+       "name": "Lyric line crossfade",
+       "live": true
+      },
+      {
+       "id": "pop-on-captions",
+       "name": "Pop-on captions",
+       "live": true
+      },
+      {
+       "id": "word-by-word-emphasis",
+       "name": "Word-by-word emphasis",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Masking and clipping",
+     "techniques": [
+      {
+       "id": "color-fill-rise",
+       "name": "Color fill rise",
+       "live": true
+      },
+      {
+       "id": "dither-reveal",
+       "name": "Dither reveal",
+       "live": true
+      },
+      {
+       "id": "ink-spread-reveal",
+       "name": "Ink spread reveal",
+       "live": true
+      },
+      {
+       "id": "pixelation-reveal",
+       "name": "Pixelation reveal",
+       "live": true
+      },
+      {
+       "id": "shutter-slat-reveal",
+       "name": "Shutter slat reveal",
+       "live": true
+      },
+      {
+       "id": "text-reveal-through-shape-mask",
+       "name": "Text reveal through shape mask",
+       "live": true
+      },
+      {
+       "id": "video-clipped-inside-letterforms",
+       "name": "Video clipped inside letterforms",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Mechanical display",
+     "techniques": [
+      {
+       "id": "dot-matrix-text",
+       "name": "Dot-matrix text",
+       "live": true
+      },
+      {
+       "id": "odometer-roll",
+       "name": "Odometer roll",
+       "live": true
+      },
+      {
+       "id": "seven-segment-display",
+       "name": "Seven-segment display",
+       "live": true
+      },
+      {
+       "id": "split-flap-display",
+       "name": "Split-flap display",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Morphing",
+     "techniques": [
+      {
+       "id": "letter-morph",
+       "name": "Letter morph",
+       "live": true
+      },
+      {
+       "id": "text-to-shape-morph",
+       "name": "Text-to-shape morph",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Motion trails",
+     "techniques": [
+      {
+       "id": "echo-trail-type",
+       "name": "Echo trail type",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Path and orbit",
+     "techniques": [
+      {
+       "id": "arc-bend-morph",
+       "name": "Arc bend morph",
+       "live": true
+      },
+      {
+       "id": "orbiting-characters",
+       "name": "Orbiting characters",
+       "live": true
+      },
+      {
+       "id": "rotating-circular-text",
+       "name": "Rotating circular text",
+       "live": true
+      },
+      {
+       "id": "text-on-a-path",
+       "name": "Text on a path",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Per-unit reveals",
+     "techniques": [
+      {
+       "id": "character-blur-in",
+       "name": "Character blur-in",
+       "live": true
+      },
+      {
+       "id": "character-drop",
+       "name": "Character drop",
+       "live": true
+      },
+      {
+       "id": "character-rise",
+       "name": "Character rise",
+       "live": true
+      },
+      {
+       "id": "character-rotate-in",
+       "name": "Character rotate-in",
+       "live": true
+      },
+      {
+       "id": "character-scale-in",
+       "name": "Character scale-in",
+       "live": true
+      },
+      {
+       "id": "character-slide-in",
+       "name": "Character slide-in",
+       "live": true
+      },
+      {
+       "id": "curtain-reveal",
+       "name": "Curtain reveal",
+       "live": true
+      },
+      {
+       "id": "overshoot-bounce-in",
+       "name": "Overshoot bounce-in",
+       "live": true
+      },
+      {
+       "id": "per-character-fade-in",
+       "name": "Per-character fade-in",
+       "live": true
+      },
+      {
+       "id": "per-line-fade-in",
+       "name": "Per-line fade-in",
+       "live": true
+      },
+      {
+       "id": "per-word-fade-in",
+       "name": "Per-word fade-in",
+       "live": true
+      },
+      {
+       "id": "random-order-character-reveal",
+       "name": "Random-order character reveal",
+       "live": true
+      },
+      {
+       "id": "tracking-in",
+       "name": "Tracking in",
+       "live": true
+      },
+      {
+       "id": "tracking-out",
+       "name": "Tracking out",
+       "live": true
+      },
+      {
+       "id": "wipe-reveal",
+       "name": "Wipe reveal",
+       "live": true
+      },
+      {
+       "id": "word-flip-in",
+       "name": "Word flip-in",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Physics and particles",
+     "techniques": [
+      {
+       "id": "dissolve-to-particles",
+       "name": "Dissolve to particles",
+       "live": true
+      },
+      {
+       "id": "falling-letter-rain",
+       "name": "Falling letter rain",
+       "live": true
+      },
+      {
+       "id": "noise-dissolve",
+       "name": "Noise dissolve",
+       "live": true
+      },
+      {
+       "id": "physics-letter-drop",
+       "name": "Physics letter drop",
+       "live": true
+      },
+      {
+       "id": "spring-drag-letters",
+       "name": "Spring-drag letters",
+       "live": true
+      },
+      {
+       "id": "type-explosion",
+       "name": "Type explosion",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Scramble and decode",
+     "techniques": [
+      {
+       "id": "falling-glyph-rain-reveal",
+       "name": "Falling glyph rain reveal",
+       "live": true
+      },
+      {
+       "id": "scramble-decode",
+       "name": "Scramble decode",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Shadow",
+     "techniques": [
+      {
+       "id": "drop-shadow-lift",
+       "name": "Drop shadow lift",
+       "live": true
+      },
+      {
+       "id": "long-shadow-growth",
+       "name": "Long shadow growth",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Stretch and squash",
+     "techniques": [
+      {
+       "id": "elastic-horizontal-squash",
+       "name": "Elastic horizontal squash",
+       "live": true
+      },
+      {
+       "id": "scale-pulse",
+       "name": "Scale pulse",
+       "live": true
+      },
+      {
+       "id": "scale-zoom-through",
+       "name": "Scale zoom-through",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Stroke and outline",
+     "techniques": [
+      {
+       "id": "handwriting-reveal",
+       "name": "Handwriting reveal",
+       "live": true
+      },
+      {
+       "id": "outline-to-fill",
+       "name": "Outline-to-fill",
+       "live": true
+      },
+      {
+       "id": "stroke-draw-on",
+       "name": "Stroke draw-on",
+       "live": true
+      },
+      {
+       "id": "stroke-width-pulse",
+       "name": "Stroke width pulse",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Surface and light",
+     "techniques": [
+      {
+       "id": "chrome-specular-shimmer",
+       "name": "Chrome specular shimmer",
+       "live": true
+      },
+      {
+       "id": "gradient-sweep-across-text",
+       "name": "Gradient sweep across text",
+       "live": true
+      },
+      {
+       "id": "hue-cycle-fill",
+       "name": "Hue cycle fill",
+       "live": true
+      },
+      {
+       "id": "outline-pulse-glow",
+       "name": "Outline pulse glow",
+       "live": true
+      },
+      {
+       "id": "shine-glint-sweep",
+       "name": "Shine glint sweep",
+       "live": true
+      },
+      {
+       "id": "stamp-impression",
+       "name": "Stamp impression",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Titles and captions",
+     "techniques": [
+      {
+       "id": "title-card-reveal",
+       "name": "Title card reveal",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Typewriter and terminal",
+     "techniques": [
+      {
+       "id": "backspace-erase",
+       "name": "Backspace erase",
+       "live": true
+      },
+      {
+       "id": "blinking-cursor",
+       "name": "Blinking cursor",
+       "live": true
+      },
+      {
+       "id": "terminal-line-print",
+       "name": "Terminal line print",
+       "live": true
+      },
+      {
+       "id": "typed-word-rotator",
+       "name": "Typed word rotator",
+       "live": true
+      },
+      {
+       "id": "typewriter-reveal",
+       "name": "Typewriter reveal",
+       "live": true
+      },
+      {
+       "id": "typo-correction-typing",
+       "name": "Typo-correction typing",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Variable font",
+     "techniques": [
+      {
+       "id": "optical-size-shift",
+       "name": "Optical size shift",
+       "live": true
+      },
+      {
+       "id": "slant-axis-swing",
+       "name": "Slant axis swing",
+       "live": true
+      },
+      {
+       "id": "typeface-crossfade",
+       "name": "Typeface crossfade",
+       "live": true
+      },
+      {
+       "id": "variable-font-weight-animation",
+       "name": "Variable-font weight animation",
+       "live": true
+      },
+      {
+       "id": "variable-font-width-animation",
+       "name": "Variable-font width animation",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Wave and motion",
+     "techniques": [
+      {
+       "id": "impact-shake",
+       "name": "Impact shake",
+       "live": true
+      },
+      {
+       "id": "jitter-and-boil-text",
+       "name": "Jitter and boil text",
+       "live": true
+      },
+      {
+       "id": "letter-sort-animation",
+       "name": "Letter sort animation",
+       "live": true
+      },
+      {
+       "id": "sine-wave-text",
+       "name": "Sine wave text",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Web and scroll",
+     "techniques": [
+      {
+       "id": "hover-letter-displacement",
+       "name": "Hover letter displacement",
+       "live": true
+      },
+      {
+       "id": "scroll-driven-text-reveal",
+       "name": "Scroll-driven text reveal",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Transitions",
+   "count": 82,
+   "subgroups": [
+    {
+     "subgroup": "Cuts",
+     "techniques": [
+      {
+       "id": "cut-on-action",
+       "name": "Cut on action",
+       "live": true
+      },
+      {
+       "id": "graphic-match",
+       "name": "Graphic match",
+       "live": true
+      },
+      {
+       "id": "hard-cut",
+       "name": "Hard cut",
+       "live": true
+      },
+      {
+       "id": "insert-cutaway",
+       "name": "Insert cutaway",
+       "live": true
+      },
+      {
+       "id": "jump-cut",
+       "name": "Jump cut",
+       "live": true
+      },
+      {
+       "id": "match-cut",
+       "name": "Match cut",
+       "live": true
+      },
+      {
+       "id": "morph-cut",
+       "name": "Morph cut",
+       "live": true
+      },
+      {
+       "id": "object-pass-through",
+       "name": "Object pass-through",
+       "live": true
+      },
+      {
+       "id": "reverse-motion-cut",
+       "name": "Reverse motion cut",
+       "live": true
+      },
+      {
+       "id": "smash-cut",
+       "name": "Smash cut",
+       "live": true
+      },
+      {
+       "id": "stutter-cut",
+       "name": "Stutter cut",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Dissolves",
+     "techniques": [
+      {
+       "id": "additive-dissolve",
+       "name": "Additive dissolve",
+       "live": true
+      },
+      {
+       "id": "blur-dissolve",
+       "name": "Blur dissolve",
+       "live": true
+      },
+      {
+       "id": "cross-dissolve",
+       "name": "Cross dissolve",
+       "live": true
+      },
+      {
+       "id": "dip-to-black",
+       "name": "Dip to black",
+       "live": true
+      },
+      {
+       "id": "film-dissolve",
+       "name": "Film dissolve",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Glitch",
+     "techniques": [
+      {
+       "id": "glitch-transition",
+       "name": "Glitch transition",
+       "live": true
+      },
+      {
+       "id": "rgb-split",
+       "name": "RGB split",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Interface and Views",
+     "techniques": [
+      {
+       "id": "container-transform",
+       "name": "Container transform",
+       "live": true
+      },
+      {
+       "id": "shared-element-transition",
+       "name": "Shared-element transition",
+       "live": true
+      },
+      {
+       "id": "view-transition",
+       "name": "View transition",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Light and Flash",
+     "techniques": [
+      {
+       "id": "film-burn",
+       "name": "Film burn",
+       "live": true
+      },
+      {
+       "id": "light-leak",
+       "name": "Light leak",
+       "live": true
+      },
+      {
+       "id": "strobe-cut",
+       "name": "Strobe cut",
+       "live": true
+      },
+      {
+       "id": "flash-cut",
+       "name": "White flash transition",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Motion Blur",
+     "techniques": [
+      {
+       "id": "whip-pan",
+       "name": "Whip pan",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Organic and Fluid",
+     "techniques": [
+      {
+       "id": "elastic-stretch",
+       "name": "Elastic stretch",
+       "live": true
+      },
+      {
+       "id": "ink-bleed",
+       "name": "Ink bleed",
+       "live": true
+      },
+      {
+       "id": "kaleidoscope",
+       "name": "Kaleidoscope",
+       "live": true
+      },
+      {
+       "id": "liquid-morph",
+       "name": "Liquid morph",
+       "live": true
+      },
+      {
+       "id": "paint-brush-wipe",
+       "name": "Paint brush wipe",
+       "live": true
+      },
+      {
+       "id": "ripple",
+       "name": "Ripple",
+       "live": true
+      },
+      {
+       "id": "shape-morph",
+       "name": "Shape morph",
+       "live": true
+      },
+      {
+       "id": "smoke-dissolve",
+       "name": "Smoke dissolve",
+       "live": true
+      },
+      {
+       "id": "swirl",
+       "name": "Swirl",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Page and Fold",
+     "techniques": [
+      {
+       "id": "accordion-fold",
+       "name": "Accordion fold",
+       "live": true
+      },
+      {
+       "id": "crumple",
+       "name": "Crumple",
+       "live": true
+      },
+      {
+       "id": "origami-fold",
+       "name": "Origami fold",
+       "live": true
+      },
+      {
+       "id": "page-turn",
+       "name": "Page turn",
+       "live": true
+      },
+      {
+       "id": "roll-up",
+       "name": "Roll-up",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Pixel and Mosaic",
+     "techniques": [
+      {
+       "id": "pixelate-transition",
+       "name": "Pixelate transition",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Rotation and 3D",
+     "techniques": [
+      {
+       "id": "cube-rotate",
+       "name": "Cube rotate",
+       "live": true
+      },
+      {
+       "id": "door-swing",
+       "name": "Door swing",
+       "live": true
+      },
+      {
+       "id": "flip",
+       "name": "Flip",
+       "live": true
+      },
+      {
+       "id": "spin",
+       "name": "Spin",
+       "live": true
+      },
+      {
+       "id": "tumble",
+       "name": "Tumble",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Shape and Mask",
+     "techniques": [
+      {
+       "id": "text-mask-reveal",
+       "name": "Text mask reveal",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Shatter and Break",
+     "techniques": [
+      {
+       "id": "shatter",
+       "name": "Shatter",
+       "live": true
+      },
+      {
+       "id": "tile-flip",
+       "name": "Tile flip",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Slides and Pushes",
+     "techniques": [
+      {
+       "id": "canvas-pan-and-zoom",
+       "name": "Canvas pan and zoom",
+       "live": true
+      },
+      {
+       "id": "parallax-slide",
+       "name": "Parallax slide",
+       "live": true
+      },
+      {
+       "id": "push",
+       "name": "Push",
+       "live": true
+      },
+      {
+       "id": "slide-over-cover",
+       "name": "Slide-over cover",
+       "live": true
+      },
+      {
+       "id": "split-screen-transition",
+       "name": "Split-screen transition",
+       "live": true
+      },
+      {
+       "id": "stacked-card-reveal",
+       "name": "Stacked card reveal",
+       "live": true
+      },
+      {
+       "id": "uncover",
+       "name": "Uncover",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Wipes",
+     "techniques": [
+      {
+       "id": "barn-door-wipe",
+       "name": "Barn door wipe",
+       "live": true
+      },
+      {
+       "id": "box-wipe",
+       "name": "Box wipe",
+       "live": true
+      },
+      {
+       "id": "checkerboard-wipe",
+       "name": "Checkerboard wipe",
+       "live": true
+      },
+      {
+       "id": "clock-wipe",
+       "name": "Clock wipe",
+       "live": true
+      },
+      {
+       "id": "corner-wipe",
+       "name": "Corner wipe",
+       "live": true
+      },
+      {
+       "id": "diagonal-wipe",
+       "name": "Diagonal wipe",
+       "live": true
+      },
+      {
+       "id": "diamond-wipe",
+       "name": "Diamond wipe",
+       "live": true
+      },
+      {
+       "id": "drip-wipe",
+       "name": "Drip wipe",
+       "live": true
+      },
+      {
+       "id": "gradient-wipe",
+       "name": "Gradient wipe",
+       "live": true
+      },
+      {
+       "id": "heart-wipe",
+       "name": "Heart wipe",
+       "live": true
+      },
+      {
+       "id": "iris-wipe",
+       "name": "Iris wipe",
+       "live": true
+      },
+      {
+       "id": "linear-wipe",
+       "name": "Linear wipe",
+       "live": true
+      },
+      {
+       "id": "luma-wipe",
+       "name": "Luma wipe",
+       "live": true
+      },
+      {
+       "id": "pinwheel-wipe",
+       "name": "Pinwheel wipe",
+       "live": true
+      },
+      {
+       "id": "scanline-wipe",
+       "name": "Scanline wipe",
+       "live": true
+      },
+      {
+       "id": "shutter-wipe",
+       "name": "Shutter wipe",
+       "live": true
+      },
+      {
+       "id": "spiral-wipe",
+       "name": "Spiral wipe",
+       "live": true
+      },
+      {
+       "id": "star-wipe",
+       "name": "Star wipe",
+       "live": true
+      },
+      {
+       "id": "venetian-blinds-wipe",
+       "name": "Venetian blinds wipe",
+       "live": true
+      },
+      {
+       "id": "zigzag-wipe",
+       "name": "Zigzag wipe",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Zoom",
+     "techniques": [
+      {
+       "id": "cross-zoom",
+       "name": "Cross zoom",
+       "live": true
+      },
+      {
+       "id": "dolly-zoom",
+       "name": "Dolly zoom",
+       "live": true
+      },
+      {
+       "id": "punch-in",
+       "name": "Punch-in",
+       "live": true
+      },
+      {
+       "id": "zoom-blur",
+       "name": "Zoom blur",
+       "live": true
+      },
+      {
+       "id": "zoom-out-reveal",
+       "name": "Zoom out reveal",
+       "live": true
+      },
+      {
+       "id": "zoom-through",
+       "name": "Zoom through",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "UI & interaction",
+   "count": 121,
+   "subgroups": [
+    {
+     "subgroup": "Buttons",
+     "techniques": [
+      {
+       "id": "arrow-slide",
+       "name": "Arrow slide",
+       "live": true
+      },
+      {
+       "id": "border-draw-button",
+       "name": "Border draw button",
+       "live": true
+      },
+      {
+       "id": "fill-sweep-button",
+       "name": "Fill sweep button",
+       "live": true
+      },
+      {
+       "id": "glow-button",
+       "name": "Glow button",
+       "live": true
+      },
+      {
+       "id": "gradient-shift-button",
+       "name": "Gradient shift button",
+       "live": true
+      },
+      {
+       "id": "hold-to-confirm",
+       "name": "Hold to confirm",
+       "live": true
+      },
+      {
+       "id": "hover-lift",
+       "name": "Hover lift",
+       "live": true
+      },
+      {
+       "id": "liquid-button",
+       "name": "Liquid button",
+       "live": true
+      },
+      {
+       "id": "loading-state-morph",
+       "name": "Loading state morph",
+       "live": true
+      },
+      {
+       "id": "magnetic-button",
+       "name": "Magnetic button",
+       "live": true
+      },
+      {
+       "id": "press-depress",
+       "name": "Press depress",
+       "live": true
+      },
+      {
+       "id": "sheen-sweep",
+       "name": "Sheen sweep",
+       "live": true
+      },
+      {
+       "id": "squash-on-tap",
+       "name": "Squash on tap",
+       "live": true
+      },
+      {
+       "id": "touch-ripple",
+       "name": "Touch ripple",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Cards & media",
+     "techniques": [
+      {
+       "id": "aurora-gradient-background",
+       "name": "Aurora gradient background",
+       "live": true
+      },
+      {
+       "id": "before-after-slider",
+       "name": "Before-after slider",
+       "live": true
+      },
+      {
+       "id": "gradient-border-spin",
+       "name": "Gradient border spin",
+       "live": true
+      },
+      {
+       "id": "image-crossfade-slideshow",
+       "name": "Image crossfade slideshow",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Cursor & hover",
+     "techniques": [
+      {
+       "id": "3d-tilt-on-hover",
+       "name": "3D tilt on hover",
+       "live": true
+      },
+      {
+       "id": "avatar-stack-spread",
+       "name": "Avatar stack spread",
+       "live": true
+      },
+      {
+       "id": "border-glow-follow",
+       "name": "Border glow follow",
+       "live": true
+      },
+      {
+       "id": "cursor-follower-dot-and-ring",
+       "name": "Cursor follower dot and ring",
+       "live": true
+      },
+      {
+       "id": "cursor-particle-trail",
+       "name": "Cursor particle trail",
+       "live": true
+      },
+      {
+       "id": "cursor-state-change",
+       "name": "Cursor state change",
+       "live": true
+      },
+      {
+       "id": "dock-magnification",
+       "name": "Dock magnification",
+       "live": true
+      },
+      {
+       "id": "image-hover-mask-reveal",
+       "name": "Image hover mask reveal",
+       "live": true
+      },
+      {
+       "id": "image-hover-zoom",
+       "name": "Image hover zoom",
+       "live": true
+      },
+      {
+       "id": "particle-field-repel",
+       "name": "Particle field repel",
+       "live": true
+      },
+      {
+       "id": "pointer-parallax-layers",
+       "name": "Pointer parallax layers",
+       "live": true
+      },
+      {
+       "id": "spotlight-hover",
+       "name": "Spotlight hover",
+       "live": true
+      },
+      {
+       "id": "underline-wipe",
+       "name": "Underline wipe",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Feedback & status",
+     "techniques": [
+      {
+       "id": "badge-count-bump",
+       "name": "Badge count bump",
+       "live": true
+      },
+      {
+       "id": "circle-check-draw",
+       "name": "Circle check draw",
+       "live": true
+      },
+      {
+       "id": "empty-state-idle-loop",
+       "name": "Empty state idle loop",
+       "live": true
+      },
+      {
+       "id": "audio-waveform-bars",
+       "name": "Equalizer bars",
+       "live": true
+      },
+      {
+       "id": "error-shake",
+       "name": "Error shake",
+       "live": true
+      },
+      {
+       "id": "loading-to-success-morph",
+       "name": "Loading to success morph",
+       "live": true
+      },
+      {
+       "id": "pagination-pill-indicator",
+       "name": "Pagination pill indicator",
+       "live": true
+      },
+      {
+       "id": "progress-steps-connector-fill",
+       "name": "Progress steps connector fill",
+       "live": true
+      },
+      {
+       "id": "staged-onboarding-walkthrough",
+       "name": "Staged onboarding walkthrough",
+       "live": true
+      },
+      {
+       "id": "toast-auto-dismiss-bar",
+       "name": "Toast auto-dismiss bar",
+       "live": true
+      },
+      {
+       "id": "toast-slide-in-stack",
+       "name": "Toast slide-in stack",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Forms",
+     "techniques": [
+      {
+       "id": "floating-label",
+       "name": "Floating label",
+       "live": true
+      },
+      {
+       "id": "focus-ring-draw",
+       "name": "Focus ring draw",
+       "live": true
+      },
+      {
+       "id": "input-underline-grow",
+       "name": "Input underline grow",
+       "live": true
+      },
+      {
+       "id": "password-reveal-toggle",
+       "name": "Password reveal toggle",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Gestures & drag",
+     "techniques": [
+      {
+       "id": "carousel-slide",
+       "name": "Carousel slide",
+       "live": true
+      },
+      {
+       "id": "coverflow-carousel",
+       "name": "Coverflow carousel",
+       "live": true
+      },
+      {
+       "id": "drag-lift-with-shadow",
+       "name": "Drag lift with shadow",
+       "live": true
+      },
+      {
+       "id": "drop-target-highlight",
+       "name": "Drop target highlight",
+       "live": true
+      },
+      {
+       "id": "momentum-fling",
+       "name": "Momentum fling",
+       "live": true
+      },
+      {
+       "id": "pull-to-refresh",
+       "name": "Pull to refresh",
+       "live": true
+      },
+      {
+       "id": "reorder-list-shuffle",
+       "name": "Reorder list shuffle",
+       "live": true
+      },
+      {
+       "id": "row-collapse-removal",
+       "name": "Row collapse removal",
+       "live": true
+      },
+      {
+       "id": "rubber-band-overscroll",
+       "name": "Rubber band overscroll",
+       "live": true
+      },
+      {
+       "id": "swipe-action-row",
+       "name": "Swipe action row",
+       "live": true
+      },
+      {
+       "id": "swipe-to-dismiss",
+       "name": "Swipe to dismiss",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Layout & lists",
+     "techniques": [
+      {
+       "id": "bento-grid-reveal",
+       "name": "Bento grid reveal",
+       "live": true
+      },
+      {
+       "id": "blur-up-image-load",
+       "name": "Blur-up image load",
+       "live": true
+      },
+      {
+       "id": "infinite-scroll-append",
+       "name": "Infinite scroll append",
+       "live": true
+      },
+      {
+       "id": "layout-animation-flip",
+       "name": "Layout animation (FLIP)",
+       "live": true
+      },
+      {
+       "id": "masonry-reflow",
+       "name": "Masonry reflow",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Loaders",
+     "techniques": [
+      {
+       "id": "bouncing-dots",
+       "name": "Bouncing dots",
+       "live": true
+      },
+      {
+       "id": "grid-wave-loader",
+       "name": "Grid wave loader",
+       "live": true
+      },
+      {
+       "id": "indeterminate-bar",
+       "name": "Indeterminate bar",
+       "live": true
+      },
+      {
+       "id": "orbit-loader",
+       "name": "Orbit loader",
+       "live": true
+      },
+      {
+       "id": "progress-ring",
+       "name": "Progress ring",
+       "live": true
+      },
+      {
+       "id": "pulse-loader",
+       "name": "Pulse loader",
+       "live": true
+      },
+      {
+       "id": "shape-morph-loader",
+       "name": "Shape morph loader",
+       "live": true
+      },
+      {
+       "id": "skeleton-shimmer",
+       "name": "Skeleton shimmer",
+       "live": true
+      },
+      {
+       "id": "spinner-ring",
+       "name": "Spinner ring",
+       "live": true
+      },
+      {
+       "id": "striped-progress-bar",
+       "name": "Striped progress bar",
+       "live": true
+      },
+      {
+       "id": "stroke-draw-logo-loader",
+       "name": "Stroke draw logo loader",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Overlays & menus",
+     "techniques": [
+      {
+       "id": "accordion-height-expand",
+       "name": "Accordion height expand",
+       "live": true
+      },
+      {
+       "id": "bottom-sheet-slide-up",
+       "name": "Bottom sheet slide-up",
+       "live": true
+      },
+      {
+       "id": "circular-clip-reveal",
+       "name": "Circular clip reveal",
+       "live": true
+      },
+      {
+       "id": "coachmark-spotlight-cutout",
+       "name": "Coachmark spotlight cutout",
+       "live": true
+      },
+      {
+       "id": "context-menu-origin-reveal",
+       "name": "Context menu origin reveal",
+       "live": true
+      },
+      {
+       "id": "dropdown-stagger-reveal",
+       "name": "Dropdown stagger reveal",
+       "live": true
+      },
+      {
+       "id": "hover-reveal-actions",
+       "name": "Hover-reveal actions",
+       "live": true
+      },
+      {
+       "id": "modal-scale-fade-enter",
+       "name": "Modal scale-fade enter",
+       "live": true
+      },
+      {
+       "id": "radial-menu-fan-out",
+       "name": "Radial menu fan-out",
+       "live": true
+      },
+      {
+       "id": "sidebar-collapse-width",
+       "name": "Sidebar collapse width",
+       "live": true
+      },
+      {
+       "id": "speed-dial-fan",
+       "name": "Speed dial fan",
+       "live": true
+      },
+      {
+       "id": "tooltip-fade-follow",
+       "name": "Tooltip fade follow",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Page transitions",
+     "techniques": [
+      {
+       "id": "page-load-sequence",
+       "name": "Page load sequence",
+       "live": true
+      },
+      {
+       "id": "tab-panel-slide",
+       "name": "Tab panel slide",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Scroll",
+     "techniques": [
+      {
+       "id": "fade-up-scroll-reveal",
+       "name": "Fade-up scroll reveal",
+       "live": true
+      },
+      {
+       "id": "horizontal-scroll-section",
+       "name": "Horizontal scroll section",
+       "live": true
+      },
+      {
+       "id": "infinite-marquee",
+       "name": "Infinite marquee",
+       "live": true
+      },
+      {
+       "id": "scroll-parallax-layers",
+       "name": "Scroll parallax layers",
+       "live": true
+      },
+      {
+       "id": "scroll-pin-section",
+       "name": "Scroll pin section",
+       "live": true
+      },
+      {
+       "id": "scroll-progress-bar",
+       "name": "Scroll progress bar",
+       "live": true
+      },
+      {
+       "id": "scroll-snap-sections",
+       "name": "Scroll snap sections",
+       "live": true
+      },
+      {
+       "id": "scroll-velocity-skew",
+       "name": "Scroll velocity skew",
+       "live": true
+      },
+      {
+       "id": "scroll-drawn-svg-path",
+       "name": "Scroll-drawn SVG path",
+       "live": true
+      },
+      {
+       "id": "scroll-linked-background-shift",
+       "name": "Scroll-linked background shift",
+       "live": true
+      },
+      {
+       "id": "scroll-linked-clip-reveal",
+       "name": "Scroll-linked clip reveal",
+       "live": true
+      },
+      {
+       "id": "scroll-scrubbed-frame-sequence",
+       "name": "Scroll-scrubbed frame sequence",
+       "live": true
+      },
+      {
+       "id": "scrollspy-nav-indicator",
+       "name": "Scrollspy nav indicator",
+       "live": true
+      },
+      {
+       "id": "scrollytelling-step-sequence",
+       "name": "Scrollytelling step sequence",
+       "live": true
+      },
+      {
+       "id": "shrinking-sticky-header",
+       "name": "Shrinking sticky header",
+       "live": true
+      },
+      {
+       "id": "smooth-scroll-inertia",
+       "name": "Smooth scroll inertia",
+       "live": true
+      },
+      {
+       "id": "staggered-cascade-reveal",
+       "name": "Staggered cascade reveal",
+       "live": true
+      },
+      {
+       "id": "sticky-card-stack-on-scroll",
+       "name": "Sticky card stack on scroll",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Text & type",
+     "techniques": [
+      {
+       "id": "highlighter-swipe",
+       "name": "Highlighter swipe",
+       "live": true
+      },
+      {
+       "id": "letter-roll",
+       "name": "Letter roll",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Theme",
+     "techniques": [
+      {
+       "id": "theme-swap-crossfade",
+       "name": "Theme swap crossfade",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Toggles & controls",
+     "techniques": [
+      {
+       "id": "bookmark-fill",
+       "name": "Bookmark fill",
+       "live": true
+      },
+      {
+       "id": "checkbox-check-draw",
+       "name": "Checkbox check draw",
+       "live": true
+      },
+      {
+       "id": "hamburger-to-x",
+       "name": "Hamburger to X",
+       "live": true
+      },
+      {
+       "id": "indeterminate-dash-morph",
+       "name": "Indeterminate dash morph",
+       "live": true
+      },
+      {
+       "id": "like-heart-burst",
+       "name": "Like heart burst",
+       "live": true
+      },
+      {
+       "id": "play-pause-morph",
+       "name": "Play-pause morph",
+       "live": true
+      },
+      {
+       "id": "plus-to-close-rotate",
+       "name": "Plus to close rotate",
+       "live": true
+      },
+      {
+       "id": "radio-dot-scale",
+       "name": "Radio dot scale",
+       "live": true
+      },
+      {
+       "id": "range-slider-value-bubble",
+       "name": "Range slider value bubble",
+       "live": true
+      },
+      {
+       "id": "segmented-control-slide",
+       "name": "Segmented control slide",
+       "live": true
+      },
+      {
+       "id": "star-rating-fill",
+       "name": "Star rating fill",
+       "live": true
+      },
+      {
+       "id": "tab-underline-slide",
+       "name": "Tab underline slide",
+       "live": true
+      },
+      {
+       "id": "toggle-switch-slide",
+       "name": "Toggle switch slide",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Shape & vector",
+   "count": 84,
+   "subgroups": [
+    {
+     "subgroup": "Bounce & pop",
+     "techniques": [
+      {
+       "id": "badge-stamp-impact",
+       "name": "Badge stamp impact",
+       "live": true
+      },
+      {
+       "id": "circle-pop",
+       "name": "Circle pop",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Bursts & particles",
+     "techniques": [
+      {
+       "id": "confetti-burst",
+       "name": "Confetti burst",
+       "live": true
+      },
+      {
+       "id": "particle-swarm-assemble",
+       "name": "Particle swarm assemble",
+       "live": true
+      },
+      {
+       "id": "pixel-build",
+       "name": "Pixel build",
+       "live": true
+      },
+      {
+       "id": "shape-burst",
+       "name": "Shape burst",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Characters & rigs",
+     "techniques": [
+      {
+       "id": "flat-character-rig",
+       "name": "2D character rig",
+       "live": true
+      },
+      {
+       "id": "blink-and-mouth-shape-swap",
+       "name": "Blink and mouth shape swap",
+       "live": true
+      },
+      {
+       "id": "rubber-hose-limb-animation",
+       "name": "Rubber hose animation",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Cut-out & paper",
+     "techniques": [
+      {
+       "id": "collage-assembly",
+       "name": "Collage assembly",
+       "live": true
+      },
+      {
+       "id": "cut-out-paper-animation",
+       "name": "Cut-out paper animation",
+       "live": true
+      },
+      {
+       "id": "paper-fold-reveal",
+       "name": "Paper fold reveal",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Depth & shadows",
+     "techniques": [
+      {
+       "id": "drop-shadow-breathing",
+       "name": "Drop shadow breathing",
+       "live": true
+      },
+      {
+       "id": "long-shadow-extension",
+       "name": "Long shadow extension",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Explainer & infographic",
+     "techniques": [
+      {
+       "id": "callout-highlight",
+       "name": "Callout highlight",
+       "live": true
+      },
+      {
+       "id": "connector-network",
+       "name": "Connector network",
+       "live": true
+      },
+      {
+       "id": "infographic-icon-sequence",
+       "name": "Infographic icon sequence",
+       "live": true
+      },
+      {
+       "id": "map-pin-drop",
+       "name": "Map pin drop",
+       "live": true
+      },
+      {
+       "id": "map-route-draw",
+       "name": "Map route draw",
+       "live": true
+      },
+      {
+       "id": "shape-fill-sweep",
+       "name": "Shape fill sweep",
+       "live": true
+      },
+      {
+       "id": "shape-stacking-drop",
+       "name": "Shape stacking drop",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Geometric & Swiss style",
+     "techniques": [
+      {
+       "id": "bauhaus-geometric-shuffle",
+       "name": "Bauhaus geometric shuffle",
+       "live": true
+      },
+      {
+       "id": "rotating-polygon-loop",
+       "name": "Rotating polygon loop",
+       "live": true
+      },
+      {
+       "id": "swiss-grid-slide",
+       "name": "Swiss grid slide",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Geometric motion",
+     "techniques": [
+      {
+       "id": "geometric-loop",
+       "name": "Geometric loop",
+       "live": true
+      },
+      {
+       "id": "lissajous-figure-trace",
+       "name": "Lissajous figure trace",
+       "live": true
+      },
+      {
+       "id": "orbital-pulse",
+       "name": "Orbital pulse",
+       "live": true
+      },
+      {
+       "id": "rotating-rings",
+       "name": "Rotating rings",
+       "live": true
+      },
+      {
+       "id": "spiral-expansion-draw",
+       "name": "Spiral expansion draw",
+       "live": true
+      },
+      {
+       "id": "hypocycloid-spirograph",
+       "name": "Spirograph",
+       "live": true
+      },
+      {
+       "id": "zoom-through-shape",
+       "name": "Zoom-through shape",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Gradients & color",
+     "techniques": [
+      {
+       "id": "animated-gradient-sweep",
+       "name": "Animated gradient sweep",
+       "live": true
+      },
+      {
+       "id": "color-cycling",
+       "name": "Color cycling",
+       "live": true
+      },
+      {
+       "id": "gradient-mesh-drift",
+       "name": "Gradient mesh drift",
+       "live": true
+      },
+      {
+       "id": "palette-shift-transition",
+       "name": "Palette shift transition",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Hand-drawn & traditional",
+     "techniques": [
+      {
+       "id": "cel-shading-look",
+       "name": "Cel shading look",
+       "live": true
+      },
+      {
+       "id": "frame-by-frame-hand-drawn-animation",
+       "name": "Frame-by-frame hand-drawn animation",
+       "live": true
+      },
+      {
+       "id": "line-boil",
+       "name": "Line boil",
+       "live": true
+      },
+      {
+       "id": "stop-motion-animation",
+       "name": "Stop-motion animation",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Icon animation",
+     "techniques": [
+      {
+       "id": "icon-hover-bounce",
+       "name": "Icon hover bounce",
+       "live": true
+      },
+      {
+       "id": "icon-line-to-fill",
+       "name": "Icon line-to-fill",
+       "live": true
+      },
+      {
+       "id": "icon-state-morph",
+       "name": "Icon state morph",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Isometric",
+     "techniques": [
+      {
+       "id": "isometric-bar-rise",
+       "name": "Isometric bar rise",
+       "live": true
+      },
+      {
+       "id": "isometric-rotation",
+       "name": "Isometric rotation",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Lines & strokes",
+     "techniques": [
+      {
+       "id": "bezier-handle-bend",
+       "name": "Bezier handle bend",
+       "live": true
+      },
+      {
+       "id": "line-to-polygon-transform",
+       "name": "Line-to-polygon transform",
+       "live": true
+      },
+      {
+       "id": "dashed-line-march",
+       "name": "Marching ants",
+       "live": true
+      },
+      {
+       "id": "offset-path-expansion",
+       "name": "Offset path expansion",
+       "live": true
+      },
+      {
+       "id": "path-follow-motion",
+       "name": "Path follow motion",
+       "live": true
+      },
+      {
+       "id": "pucker-and-bloat",
+       "name": "Pucker and bloat",
+       "live": true
+      },
+      {
+       "id": "ribbon-sweep",
+       "name": "Ribbon sweep",
+       "live": true
+      },
+      {
+       "id": "speed-lines",
+       "name": "Speed lines",
+       "live": true
+      },
+      {
+       "id": "wiggle-path",
+       "name": "Wiggle path",
+       "live": true
+      },
+      {
+       "id": "zig-zag-distortion",
+       "name": "Zig-zag distortion",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Liquid & organic",
+     "techniques": [
+      {
+       "id": "brush-stroke-paint-reveal",
+       "name": "Brush stroke paint reveal",
+       "live": true
+      },
+      {
+       "id": "ink-splash-spread",
+       "name": "Ink splash spread",
+       "live": true
+      },
+      {
+       "id": "liquid-fill-level",
+       "name": "Liquid fill level",
+       "live": true
+      },
+      {
+       "id": "morphing-blob",
+       "name": "Morphing blob",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Logo animation",
+     "techniques": [
+      {
+       "id": "coin-flip",
+       "name": "Coin flip",
+       "live": true
+      },
+      {
+       "id": "logo-3d-spin-reveal",
+       "name": "Logo 3D spin reveal",
+       "live": true
+      },
+      {
+       "id": "logo-build-on-reveal",
+       "name": "Logo build-on reveal",
+       "live": true
+      },
+      {
+       "id": "logo-glitch-reveal",
+       "name": "Logo glitch reveal",
+       "live": true
+      },
+      {
+       "id": "logo-mask-wipe-reveal",
+       "name": "Logo mask wipe reveal",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Optical & interference",
+     "techniques": [
+      {
+       "id": "op-art-vibrating-pattern",
+       "name": "Op-art vibrating pattern",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Polygon & tessellation",
+     "techniques": [
+      {
+       "id": "delaunay-triangle-mesh",
+       "name": "Delaunay triangle mesh",
+       "live": true
+      },
+      {
+       "id": "polygon-subdivision",
+       "name": "Polygon subdivision",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Repeaters & patterns",
+     "techniques": [
+      {
+       "id": "halftone-dot-scaling",
+       "name": "Halftone dot scaling",
+       "live": true
+      },
+      {
+       "id": "hexagon-tile-reveal",
+       "name": "Hexagon tile reveal",
+       "live": true
+      },
+      {
+       "id": "line-weave",
+       "name": "Line weave",
+       "live": true
+      },
+      {
+       "id": "linear-repeater-stagger",
+       "name": "Linear repeater stagger",
+       "live": true
+      },
+      {
+       "id": "mograph-grid-flip",
+       "name": "Mograph grid flip",
+       "live": true
+      },
+      {
+       "id": "radial-repeater",
+       "name": "Radial repeater",
+       "live": true
+      },
+      {
+       "id": "scale-tile-wave",
+       "name": "Scale tile wave",
+       "live": true
+      },
+      {
+       "id": "spiral-bloom",
+       "name": "Spiral bloom",
+       "live": true
+      },
+      {
+       "id": "tessellation-triangle-flip",
+       "name": "Tessellation triangle flip",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Shape morphing",
+     "techniques": [
+      {
+       "id": "blob-to-icon-morph",
+       "name": "Blob-to-icon morph",
+       "live": true
+      },
+      {
+       "id": "shape-assemble-from-fragments",
+       "name": "Shape assemble from fragments",
+       "live": true
+      },
+      {
+       "id": "shape-boolean-merge",
+       "name": "Shape boolean merge",
+       "live": true
+      },
+      {
+       "id": "squircle-morph",
+       "name": "Squircle morph",
+       "live": true
+      },
+      {
+       "id": "superformula-morph",
+       "name": "Superformula morph",
+       "live": true
+      },
+      {
+       "id": "tangram-rearrangement",
+       "name": "Tangram rearrangement",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Sound-reactive",
+     "techniques": [
+      {
+       "id": "sound-reactive-radial-shape",
+       "name": "Radial audio visualizer",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Waves & ripples",
+     "techniques": [
+      {
+       "id": "ripple-rings",
+       "name": "Ripple rings",
+       "live": true
+      },
+      {
+       "id": "sine-wave-distortion",
+       "name": "Sine wave distortion",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Particles & generative",
+   "count": 122,
+   "subgroups": [
+    {
+     "subgroup": "Audio-reactive",
+     "techniques": [
+      {
+       "id": "audio-reactive-particles",
+       "name": "Audio-reactive particles",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Cellular automata",
+     "techniques": [
+      {
+       "id": "brian-s-brain",
+       "name": "Brian's Brain",
+       "live": true
+      },
+      {
+       "id": "conway-s-game-of-life",
+       "name": "Conway's Game of Life",
+       "live": true
+      },
+      {
+       "id": "cyclic-cellular-automaton",
+       "name": "Cyclic cellular automaton",
+       "live": true
+      },
+      {
+       "id": "falling-sand",
+       "name": "Falling sand",
+       "live": true
+      },
+      {
+       "id": "langton-s-ant",
+       "name": "Langton's ant",
+       "live": true
+      },
+      {
+       "id": "lenia",
+       "name": "Lenia",
+       "live": true
+      },
+      {
+       "id": "rule-110-automaton",
+       "name": "Rule 110 automaton",
+       "live": true
+      },
+      {
+       "id": "rule-30-automaton",
+       "name": "Rule 30 automaton",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Electricity",
+     "techniques": [
+      {
+       "id": "electric-arc",
+       "name": "Electric arc",
+       "live": true
+      },
+      {
+       "id": "lightning-bolt",
+       "name": "Lightning bolt",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Emitters",
+     "techniques": [
+      {
+       "id": "animated-sprite-particles",
+       "name": "Animated sprite particles",
+       "live": true
+      },
+      {
+       "id": "bokeh-particles",
+       "name": "Bokeh particles",
+       "live": true
+      },
+      {
+       "id": "bubbles",
+       "name": "Bubbles",
+       "live": true
+      },
+      {
+       "id": "confetti",
+       "name": "Confetti",
+       "live": true
+      },
+      {
+       "id": "dust-motes",
+       "name": "Dust motes",
+       "live": true
+      },
+      {
+       "id": "embers",
+       "name": "Embers",
+       "live": true
+      },
+      {
+       "id": "falling-leaves",
+       "name": "Falling leaves",
+       "live": true
+      },
+      {
+       "id": "fireflies",
+       "name": "Fireflies",
+       "live": true
+      },
+      {
+       "id": "fireworks",
+       "name": "Fireworks",
+       "live": true
+      },
+      {
+       "id": "fountain",
+       "name": "Fountain",
+       "live": true
+      },
+      {
+       "id": "glitter-pour",
+       "name": "Glitter pour",
+       "live": true
+      },
+      {
+       "id": "meteor-shower",
+       "name": "Meteor shower",
+       "live": true
+      },
+      {
+       "id": "particle-trail",
+       "name": "Particle trail",
+       "live": true
+      },
+      {
+       "id": "path-emitter",
+       "name": "Path emitter",
+       "live": true
+      },
+      {
+       "id": "pollen-drift",
+       "name": "Pollen drift",
+       "live": true
+      },
+      {
+       "id": "rainfall",
+       "name": "Rainfall",
+       "live": true
+      },
+      {
+       "id": "smoke-puffs",
+       "name": "Smoke puffs",
+       "live": true
+      },
+      {
+       "id": "snowfall",
+       "name": "Snowfall",
+       "live": true
+      },
+      {
+       "id": "sparks",
+       "name": "Sparks",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Fire & plasma",
+     "techniques": [
+      {
+       "id": "doom-style-fire",
+       "name": "Doom-style fire",
+       "live": true
+      },
+      {
+       "id": "sine-plasma",
+       "name": "Sine plasma",
+       "live": true
+      },
+      {
+       "id": "texture-tunnel",
+       "name": "Texture tunnel",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Fluids",
+     "techniques": [
+      {
+       "id": "ink-in-water",
+       "name": "Ink in water",
+       "live": true
+      },
+      {
+       "id": "k-rm-n-vortex-street",
+       "name": "K\u00e1rm\u00e1n vortex street",
+       "live": true
+      },
+      {
+       "id": "smoke-simulation",
+       "name": "Smoke simulation",
+       "live": true
+      },
+      {
+       "id": "sph-fluid",
+       "name": "SPH fluid",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Forces",
+     "techniques": [
+      {
+       "id": "elastic-collisions",
+       "name": "Elastic collisions",
+       "live": true
+      },
+      {
+       "id": "gravity-well-attraction",
+       "name": "Gravity well attraction",
+       "live": true
+      },
+      {
+       "id": "spring-return",
+       "name": "Spring return",
+       "live": true
+      },
+      {
+       "id": "turbulence-displacement",
+       "name": "Turbulence field",
+       "live": true
+      },
+      {
+       "id": "wind-field",
+       "name": "Wind field",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Fractals",
+     "techniques": [
+      {
+       "id": "barnsley-fern",
+       "name": "Barnsley fern",
+       "live": true
+      },
+      {
+       "id": "burning-ship-fractal",
+       "name": "Burning Ship fractal",
+       "live": true
+      },
+      {
+       "id": "dragon-curve",
+       "name": "Dragon curve",
+       "live": true
+      },
+      {
+       "id": "hilbert-curve",
+       "name": "Hilbert curve",
+       "live": true
+      },
+      {
+       "id": "julia-set-morph",
+       "name": "Julia set morph",
+       "live": true
+      },
+      {
+       "id": "koch-snowflake",
+       "name": "Koch snowflake",
+       "live": true
+      },
+      {
+       "id": "mandelbrot-zoom",
+       "name": "Mandelbrot zoom",
+       "live": true
+      },
+      {
+       "id": "mandelbulb-raymarch",
+       "name": "Mandelbulb raymarch",
+       "live": true
+      },
+      {
+       "id": "sierpinski-gasket",
+       "name": "Sierpinski gasket",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Growth & L-systems",
+     "techniques": [
+      {
+       "id": "l-system-plant",
+       "name": "L-system plant",
+       "live": true
+      },
+      {
+       "id": "phyllotaxis",
+       "name": "Phyllotaxis",
+       "live": true
+      },
+      {
+       "id": "recursive-tree",
+       "name": "Recursive tree",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Interaction fields",
+     "techniques": [
+      {
+       "id": "cymatics",
+       "name": "Cymatics",
+       "live": true
+      },
+      {
+       "id": "dot-grid-displacement",
+       "name": "Dot grid displacement",
+       "live": true
+      },
+      {
+       "id": "moire-pattern",
+       "name": "Moire pattern",
+       "live": true
+      },
+      {
+       "id": "random-walk",
+       "name": "Random walk",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Metaballs & blobs",
+     "techniques": [
+      {
+       "id": "gooey-filter",
+       "name": "Gooey filter",
+       "live": true
+      },
+      {
+       "id": "lava-lamp",
+       "name": "Lava lamp",
+       "live": true
+      },
+      {
+       "id": "marching-squares-contour",
+       "name": "Marching squares contour",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Noise & fields",
+     "techniques": [
+      {
+       "id": "curl-noise-flow",
+       "name": "Curl noise flow",
+       "live": true
+      },
+      {
+       "id": "domain-warping",
+       "name": "Domain warping",
+       "live": true
+      },
+      {
+       "id": "flow-field",
+       "name": "Flow field",
+       "live": true
+      },
+      {
+       "id": "fractal-brownian-motion",
+       "name": "Fractal Brownian motion",
+       "live": true
+      },
+      {
+       "id": "isolines-contour-animation",
+       "name": "Isolines contour animation",
+       "live": true
+      },
+      {
+       "id": "magnetic-field-lines",
+       "name": "Magnetic field lines",
+       "live": true
+      },
+      {
+       "id": "perlin-noise-field",
+       "name": "Perlin noise field",
+       "live": true
+      },
+      {
+       "id": "streamlines",
+       "name": "Streamlines",
+       "live": true
+      },
+      {
+       "id": "worley-cellular-noise",
+       "name": "Worley cellular noise",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Particle text & images",
+     "techniques": [
+      {
+       "id": "image-to-particles",
+       "name": "Image to particles",
+       "live": true
+      },
+      {
+       "id": "particle-morph",
+       "name": "Particle morph",
+       "live": true
+      },
+      {
+       "id": "particle-text-formation",
+       "name": "Particle text formation",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Reaction & growth",
+     "techniques": [
+      {
+       "id": "differential-growth",
+       "name": "Differential growth",
+       "live": true
+      },
+      {
+       "id": "diffusion-limited-aggregation",
+       "name": "Diffusion-limited aggregation",
+       "live": true
+      },
+      {
+       "id": "eden-growth",
+       "name": "Eden growth",
+       "live": true
+      },
+      {
+       "id": "reaction-diffusion",
+       "name": "Reaction-diffusion",
+       "live": true
+      },
+      {
+       "id": "space-colonization",
+       "name": "Space colonization",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Rigid bodies",
+     "techniques": [
+      {
+       "id": "domino-toppling",
+       "name": "Domino toppling",
+       "live": true
+      },
+      {
+       "id": "fracture-shatter",
+       "name": "Fracture shatter",
+       "live": true
+      },
+      {
+       "id": "galton-board",
+       "name": "Galton board",
+       "live": true
+      },
+      {
+       "id": "newton-s-cradle",
+       "name": "Newton's cradle",
+       "live": true
+      },
+      {
+       "id": "rigid-body-pile",
+       "name": "Rigid body pile",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Sand & granular",
+     "techniques": [
+      {
+       "id": "sandpile-avalanche",
+       "name": "Sandpile avalanche",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Soft bodies & cloth",
+     "techniques": [
+      {
+       "id": "mass-spring-cloth",
+       "name": "Mass-spring cloth",
+       "live": true
+      },
+      {
+       "id": "ragdoll",
+       "name": "Ragdoll",
+       "live": true
+      },
+      {
+       "id": "springs-network",
+       "name": "Springs network",
+       "live": true
+      },
+      {
+       "id": "verlet-rope",
+       "name": "Verlet rope",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Space",
+     "techniques": [
+      {
+       "id": "n-body-gravity",
+       "name": "N-body gravity",
+       "live": true
+      },
+      {
+       "id": "spiral-galaxy",
+       "name": "Spiral galaxy",
+       "live": true
+      },
+      {
+       "id": "starfield",
+       "name": "Starfield",
+       "live": true
+      },
+      {
+       "id": "two-body-orbit",
+       "name": "Two-body orbit",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Strange attractors",
+     "techniques": [
+      {
+       "id": "clifford-attractor",
+       "name": "Clifford attractor",
+       "live": true
+      },
+      {
+       "id": "de-jong-attractor",
+       "name": "De Jong attractor",
+       "live": true
+      },
+      {
+       "id": "hopalong-attractor",
+       "name": "Hopalong attractor",
+       "live": true
+      },
+      {
+       "id": "lorenz-attractor",
+       "name": "Lorenz attractor",
+       "live": true
+      },
+      {
+       "id": "rossler-attractor",
+       "name": "Rossler attractor",
+       "live": true
+      },
+      {
+       "id": "thomas-attractor",
+       "name": "Thomas attractor",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Swarms & agents",
+     "techniques": [
+      {
+       "id": "ant-colony-pheromone-trails",
+       "name": "Ant colony pheromone trails",
+       "live": true
+      },
+      {
+       "id": "boids-flocking",
+       "name": "Boids flocking",
+       "live": true
+      },
+      {
+       "id": "kuramoto-synchronization",
+       "name": "Kuramoto synchronization",
+       "live": true
+      },
+      {
+       "id": "lotka-volterra-cycles",
+       "name": "Lotka-Volterra cycles",
+       "live": true
+      },
+      {
+       "id": "particle-life",
+       "name": "Particle Life",
+       "live": true
+      },
+      {
+       "id": "physarum-slime-mold",
+       "name": "Physarum slime mold",
+       "live": true
+      },
+      {
+       "id": "predator-avoidance-flock",
+       "name": "Predator avoidance flock",
+       "live": true
+      },
+      {
+       "id": "seek-and-arrive-steering",
+       "name": "Seek and arrive steering",
+       "live": true
+      },
+      {
+       "id": "social-force-crowd",
+       "name": "Social force crowd",
+       "live": true
+      },
+      {
+       "id": "wander-steering",
+       "name": "Wander steering",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Terrain",
+     "techniques": [
+      {
+       "id": "noise-terrain-flyover",
+       "name": "Noise terrain flyover",
+       "live": true
+      },
+      {
+       "id": "wireframe-terrain",
+       "name": "Wireframe terrain",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Tiling & patterns",
+     "techniques": [
+      {
+       "id": "circle-packing",
+       "name": "Circle packing",
+       "live": true
+      },
+      {
+       "id": "maze-carving",
+       "name": "Maze carving",
+       "live": true
+      },
+      {
+       "id": "penrose-tiling",
+       "name": "Penrose tiling",
+       "live": true
+      },
+      {
+       "id": "recursive-rectangle-subdivision",
+       "name": "Recursive rectangle subdivision",
+       "live": true
+      },
+      {
+       "id": "truchet-tiles",
+       "name": "Truchet tiles",
+       "live": true
+      },
+      {
+       "id": "voronoi-cells",
+       "name": "Voronoi cells",
+       "live": true
+      },
+      {
+       "id": "voronoi-relaxation",
+       "name": "Voronoi relaxation",
+       "live": true
+      },
+      {
+       "id": "wave-function-collapse",
+       "name": "Wave function collapse",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Water & light",
+     "techniques": [
+      {
+       "id": "dam-break",
+       "name": "Dam break",
+       "live": true
+      },
+      {
+       "id": "height-field-ripples",
+       "name": "Height-field ripples",
+       "live": true
+      },
+      {
+       "id": "ocean-waves",
+       "name": "Ocean waves",
+       "live": true
+      },
+      {
+       "id": "water-caustics",
+       "name": "Water caustics",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Camera, 3D & light",
+   "count": 80,
+   "subgroups": [
+    {
+     "subgroup": "3D motion",
+     "techniques": [
+      {
+       "id": "bend-deformer",
+       "name": "Bend deformer",
+       "live": true
+      },
+      {
+       "id": "beveled-3d-text",
+       "name": "Beveled 3D text",
+       "live": true
+      },
+      {
+       "id": "card-deck-fan",
+       "name": "Card deck fan",
+       "live": true
+      },
+      {
+       "id": "cloner-grid",
+       "name": "Cloner grid",
+       "live": true
+      },
+      {
+       "id": "displacement-map",
+       "name": "Displacement map",
+       "live": true
+      },
+      {
+       "id": "effector-driven-instances",
+       "name": "Effector-driven instances",
+       "live": true
+      },
+      {
+       "id": "exploded-view",
+       "name": "Exploded view",
+       "live": true
+      },
+      {
+       "id": "extrusion",
+       "name": "Extrusion",
+       "live": true
+      },
+      {
+       "id": "hologram-effect",
+       "name": "Hologram effect",
+       "live": true
+      },
+      {
+       "id": "infinite-perspective-grid",
+       "name": "Infinite perspective grid",
+       "live": true
+      },
+      {
+       "id": "isometric-view",
+       "name": "Isometric view",
+       "live": true
+      },
+      {
+       "id": "low-poly-faceting",
+       "name": "Low-poly faceting",
+       "live": true
+      },
+      {
+       "id": "noise-vertex-wobble",
+       "name": "Noise vertex wobble",
+       "live": true
+      },
+      {
+       "id": "point-cloud-reveal",
+       "name": "Point cloud reveal",
+       "live": true
+      },
+      {
+       "id": "sphere-to-grid-morph",
+       "name": "Sphere-to-grid morph",
+       "live": true
+      },
+      {
+       "id": "taper-deformer",
+       "name": "Taper deformer",
+       "live": true
+      },
+      {
+       "id": "tesseract-rotation",
+       "name": "Tesseract rotation",
+       "live": true
+      },
+      {
+       "id": "turntable-rotation",
+       "name": "Turntable rotation",
+       "live": true
+      },
+      {
+       "id": "twist-deformer",
+       "name": "Twist deformer",
+       "live": true
+      },
+      {
+       "id": "voxel-build",
+       "name": "Voxel build",
+       "live": true
+      },
+      {
+       "id": "wave-deformer",
+       "name": "Wave deformer",
+       "live": true
+      },
+      {
+       "id": "wireframe-reveal",
+       "name": "Wireframe reveal",
+       "live": true
+      },
+      {
+       "id": "x-ray-view",
+       "name": "X-ray view",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Camera moves",
+     "techniques": [
+      {
+       "id": "crane-shot",
+       "name": "Crane shot",
+       "live": true
+      },
+      {
+       "id": "dolly-in-and-out",
+       "name": "Dolly in and out",
+       "live": true
+      },
+      {
+       "id": "drone-flyover",
+       "name": "Drone flyover",
+       "live": true
+      },
+      {
+       "id": "dutch-angle",
+       "name": "Dutch angle",
+       "live": true
+      },
+      {
+       "id": "fly-through",
+       "name": "Fly-through",
+       "live": true
+      },
+      {
+       "id": "follow-cam",
+       "name": "Follow cam",
+       "live": true
+      },
+      {
+       "id": "handheld-shake",
+       "name": "Handheld shake",
+       "live": true
+      },
+      {
+       "id": "hyperlapse",
+       "name": "Hyperlapse",
+       "live": true
+      },
+      {
+       "id": "ken-burns-effect",
+       "name": "Ken Burns effect",
+       "live": true
+      },
+      {
+       "id": "look-around",
+       "name": "Look-around",
+       "live": true
+      },
+      {
+       "id": "oner",
+       "name": "Oner",
+       "live": true
+      },
+      {
+       "id": "optical-zoom",
+       "name": "Optical zoom",
+       "live": true
+      },
+      {
+       "id": "orbit-shot",
+       "name": "Orbit shot",
+       "live": true
+      },
+      {
+       "id": "pan",
+       "name": "Pan",
+       "live": true
+      },
+      {
+       "id": "pedestal",
+       "name": "Pedestal",
+       "live": true
+      },
+      {
+       "id": "pov-shot",
+       "name": "POV shot",
+       "live": true
+      },
+      {
+       "id": "push-in",
+       "name": "Push-in",
+       "live": true
+      },
+      {
+       "id": "tilt",
+       "name": "Tilt",
+       "live": true
+      },
+      {
+       "id": "tracking-shot",
+       "name": "Tracking shot",
+       "live": true
+      },
+      {
+       "id": "truck",
+       "name": "Truck",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Depth",
+     "techniques": [
+      {
+       "id": "2-5d-photo-parallax",
+       "name": "2.5D photo parallax",
+       "live": true
+      },
+      {
+       "id": "atmospheric-fog",
+       "name": "Atmospheric fog",
+       "live": true
+      },
+      {
+       "id": "bokeh-highlights",
+       "name": "Bokeh highlights",
+       "live": true
+      },
+      {
+       "id": "depth-of-field",
+       "name": "Depth of field",
+       "live": true
+      },
+      {
+       "id": "depth-slicing",
+       "name": "Depth slicing",
+       "live": true
+      },
+      {
+       "id": "layered-fog-bands",
+       "name": "Layered fog bands",
+       "live": true
+      },
+      {
+       "id": "multiplane-camera",
+       "name": "Multiplane camera",
+       "live": true
+      },
+      {
+       "id": "parallax-layers",
+       "name": "Parallax layers",
+       "live": true
+      },
+      {
+       "id": "rack-focus",
+       "name": "Rack focus",
+       "live": true
+      },
+      {
+       "id": "tilt-shift-miniature",
+       "name": "Tilt-shift miniature",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Lens",
+     "techniques": [
+      {
+       "id": "anamorphic-squeeze",
+       "name": "Anamorphic squeeze",
+       "live": true
+      },
+      {
+       "id": "focus-breathing",
+       "name": "Focus breathing",
+       "live": true
+      },
+      {
+       "id": "lens-distortion",
+       "name": "Lens distortion",
+       "live": true
+      },
+      {
+       "id": "vignette",
+       "name": "Vignette",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Lighting & surface",
+     "techniques": [
+      {
+       "id": "bloom",
+       "name": "Bloom",
+       "live": true
+      },
+      {
+       "id": "caustics",
+       "name": "Caustics",
+       "live": true
+      },
+      {
+       "id": "chromatic-dispersion",
+       "name": "Chromatic dispersion",
+       "live": true
+      },
+      {
+       "id": "chrome-reflection",
+       "name": "Chrome reflection",
+       "live": true
+      },
+      {
+       "id": "day-night-cycle",
+       "name": "Day-night cycle",
+       "live": true
+      },
+      {
+       "id": "glass-refraction",
+       "name": "Glass refraction",
+       "live": true
+      },
+      {
+       "id": "god-rays",
+       "name": "God rays",
+       "live": true
+      },
+      {
+       "id": "lens-flare",
+       "name": "Lens flare",
+       "live": true
+      },
+      {
+       "id": "light-painting",
+       "name": "Light painting",
+       "live": true
+      },
+      {
+       "id": "lightning-flash",
+       "name": "Lightning flash",
+       "live": true
+      },
+      {
+       "id": "rim-light",
+       "name": "Rim light",
+       "live": true
+      },
+      {
+       "id": "shadow-play",
+       "name": "Shadow play",
+       "live": true
+      },
+      {
+       "id": "spotlight-follow",
+       "name": "Spotlight follow",
+       "live": true
+      },
+      {
+       "id": "subsurface-scattering-glow",
+       "name": "Subsurface scattering glow",
+       "live": true
+      },
+      {
+       "id": "thin-film-iridescence",
+       "name": "Thin-film iridescence",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Shader looks",
+     "techniques": [
+      {
+       "id": "cross-hatch-shading",
+       "name": "Cross-hatch shading",
+       "live": true
+      },
+      {
+       "id": "droste-effect",
+       "name": "Droste effect",
+       "live": true
+      },
+      {
+       "id": "fresnel-edge-glow",
+       "name": "Fresnel edge glow",
+       "live": true
+      },
+      {
+       "id": "gooch-shading",
+       "name": "Gooch shading",
+       "live": true
+      },
+      {
+       "id": "ink-outline",
+       "name": "Ink outline",
+       "live": true
+      },
+      {
+       "id": "matcap-shading",
+       "name": "Matcap shading",
+       "live": true
+      },
+      {
+       "id": "parallax-occlusion-mapping",
+       "name": "Parallax occlusion mapping",
+       "live": true
+      },
+      {
+       "id": "raymarched-sdf-shapes",
+       "name": "Raymarched SDF shapes",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "VFX & post",
+   "count": 87,
+   "subgroups": [
+    {
+     "subgroup": "Blend & composite",
+     "techniques": [
+      {
+       "id": "difference-blend",
+       "name": "Difference blend",
+       "live": true
+      },
+      {
+       "id": "emboss",
+       "name": "Emboss",
+       "live": true
+      },
+      {
+       "id": "multiply-blend",
+       "name": "Multiply blend",
+       "live": true
+      },
+      {
+       "id": "screen-blend",
+       "name": "Screen blend",
+       "live": true
+      },
+      {
+       "id": "unsharp-mask",
+       "name": "Unsharp mask",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Blur & focus",
+     "techniques": [
+      {
+       "id": "gaussian-blur",
+       "name": "Gaussian blur",
+       "live": true
+      },
+      {
+       "id": "motion-blur",
+       "name": "Motion blur",
+       "live": true
+      },
+      {
+       "id": "spin-blur",
+       "name": "Spin blur",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "CRT & display",
+     "techniques": [
+      {
+       "id": "crt-curvature",
+       "name": "CRT curvature",
+       "live": true
+      },
+      {
+       "id": "crt-power-off-collapse",
+       "name": "CRT power-off collapse",
+       "live": true
+      },
+      {
+       "id": "crt-scanlines",
+       "name": "CRT scanlines",
+       "live": true
+      },
+      {
+       "id": "phosphor-persistence",
+       "name": "Phosphor persistence",
+       "live": true
+      },
+      {
+       "id": "refresh-bar",
+       "name": "Refresh bar",
+       "live": true
+      },
+      {
+       "id": "screen-refresh-flicker",
+       "name": "Screen refresh flicker",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Color & grading",
+     "techniques": [
+      {
+       "id": "bleach-bypass",
+       "name": "Bleach bypass",
+       "live": true
+      },
+      {
+       "id": "cross-processing",
+       "name": "Cross-processing",
+       "live": true
+      },
+      {
+       "id": "desaturation",
+       "name": "Desaturation",
+       "live": true
+      },
+      {
+       "id": "duotone",
+       "name": "Duotone",
+       "live": true
+      },
+      {
+       "id": "faded-print-look",
+       "name": "Faded print look",
+       "live": true
+      },
+      {
+       "id": "lut-color-grade",
+       "name": "LUT color grade",
+       "live": true
+      },
+      {
+       "id": "photographic-negative",
+       "name": "Photographic negative",
+       "live": true
+      },
+      {
+       "id": "sepia-tone",
+       "name": "Sepia tone",
+       "live": true
+      },
+      {
+       "id": "solarization",
+       "name": "Solarization",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Dissolves",
+     "techniques": [
+      {
+       "id": "double-exposure",
+       "name": "Double exposure",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Distortion & displacement",
+     "techniques": [
+      {
+       "id": "heat-haze",
+       "name": "Heat haze",
+       "live": true
+      },
+      {
+       "id": "liquify",
+       "name": "Liquify",
+       "live": true
+      },
+      {
+       "id": "refraction-ripple",
+       "name": "Refraction ripple",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Dithering & quantization",
+     "techniques": [
+      {
+       "id": "atkinson-dithering",
+       "name": "Atkinson dithering",
+       "live": true
+      },
+      {
+       "id": "bayer-ordered-dithering",
+       "name": "Bayer ordered dithering",
+       "live": true
+      },
+      {
+       "id": "floyd-steinberg-dithering",
+       "name": "Floyd-Steinberg dithering",
+       "live": true
+      },
+      {
+       "id": "halftone",
+       "name": "Halftone",
+       "live": true
+      },
+      {
+       "id": "posterization",
+       "name": "Posterization",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Editing & frame",
+     "techniques": [
+      {
+       "id": "letterbox",
+       "name": "Letterbox",
+       "live": true
+      },
+      {
+       "id": "picture-in-picture",
+       "name": "Picture-in-picture",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Film & analog",
+     "techniques": [
+      {
+       "id": "dust-and-scratches",
+       "name": "Dust and scratches",
+       "live": true
+      },
+      {
+       "id": "film-edge-frame",
+       "name": "Film edge frame",
+       "live": true
+      },
+      {
+       "id": "film-grain",
+       "name": "Film grain",
+       "live": true
+      },
+      {
+       "id": "gate-weave",
+       "name": "Gate weave",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Glitch",
+     "techniques": [
+      {
+       "id": "channel-shuffle",
+       "name": "Channel shuffle",
+       "live": true
+      },
+      {
+       "id": "data-bending",
+       "name": "Data bending",
+       "live": true
+      },
+      {
+       "id": "pixel-sorting",
+       "name": "Pixel sorting",
+       "live": true
+      },
+      {
+       "id": "scanline-jitter",
+       "name": "Scanline jitter",
+       "live": true
+      },
+      {
+       "id": "screen-tearing",
+       "name": "Screen tearing",
+       "live": true
+      },
+      {
+       "id": "signal-dropout",
+       "name": "Signal dropout",
+       "live": true
+      },
+      {
+       "id": "static-noise",
+       "name": "Static noise",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Glow & light",
+     "techniques": [
+      {
+       "id": "halation",
+       "name": "Halation",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Keying & mattes",
+     "techniques": [
+      {
+       "id": "chroma-key",
+       "name": "Chroma key",
+       "live": true
+      },
+      {
+       "id": "luma-key",
+       "name": "Luma key",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Lens effects",
+     "techniques": [
+      {
+       "id": "diffraction-spikes",
+       "name": "Diffraction spikes",
+       "live": true
+      },
+      {
+       "id": "lens-dirt-overlay",
+       "name": "Lens dirt overlay",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Motion & shutter",
+     "techniques": [
+      {
+       "id": "accumulation-motion-blur",
+       "name": "Accumulation motion blur",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Painterly & sketch",
+     "techniques": [
+      {
+       "id": "linocut",
+       "name": "Linocut",
+       "live": true
+      },
+      {
+       "id": "oil-paint-filter",
+       "name": "Oil paint filter",
+       "live": true
+      },
+      {
+       "id": "pencil-sketch",
+       "name": "Pencil sketch",
+       "live": true
+      },
+      {
+       "id": "watercolor-bleed",
+       "name": "Watercolor bleed",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Particle & weather overlays",
+     "techniques": [
+      {
+       "id": "fire-overlay",
+       "name": "Fire overlay",
+       "live": true
+      },
+      {
+       "id": "smoke-overlay",
+       "name": "Smoke overlay",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Pixel & mosaic",
+     "techniques": [
+      {
+       "id": "ascii-art-render",
+       "name": "ASCII art render",
+       "live": true
+      },
+      {
+       "id": "mosaic-tiling",
+       "name": "Mosaic tiling",
+       "live": true
+      },
+      {
+       "id": "nearest-neighbor-upscale",
+       "name": "Nearest-neighbor upscale",
+       "live": true
+      },
+      {
+       "id": "pixelation",
+       "name": "Pixelation",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Recursion & feedback",
+     "techniques": [
+      {
+       "id": "frame-delay-echo",
+       "name": "Frame delay echo",
+       "live": true
+      },
+      {
+       "id": "video-feedback-loop",
+       "name": "Video feedback loop",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Retro digital",
+     "techniques": [
+      {
+       "id": "copper-bars",
+       "name": "Copper bars",
+       "live": true
+      },
+      {
+       "id": "matrix-digital-rain",
+       "name": "Matrix digital rain",
+       "live": true
+      },
+      {
+       "id": "synthwave-sun",
+       "name": "Synthwave sun",
+       "live": true
+      },
+      {
+       "id": "y2k-chrome",
+       "name": "Y2K chrome",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Rotoscope & outline",
+     "techniques": [
+      {
+       "id": "rotoscope-look",
+       "name": "Rotoscope look",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Symmetry & geometry",
+     "techniques": [
+      {
+       "id": "infinite-zoom-tunnel",
+       "name": "Infinite zoom",
+       "live": true
+      },
+      {
+       "id": "pattern-tiling",
+       "name": "Pattern tiling",
+       "live": true
+      },
+      {
+       "id": "polar-coordinate-warp",
+       "name": "Polar coordinate warp",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Thermal & sensor",
+     "techniques": [
+      {
+       "id": "cctv-surveillance-look",
+       "name": "CCTV surveillance look",
+       "live": true
+      },
+      {
+       "id": "infrared-false-color",
+       "name": "Infrared false color",
+       "live": true
+      },
+      {
+       "id": "night-vision",
+       "name": "Night vision",
+       "live": true
+      },
+      {
+       "id": "thermal-false-color",
+       "name": "Thermal false color",
+       "live": true
+      },
+      {
+       "id": "x-ray",
+       "name": "X-ray",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Time displacement",
+     "techniques": [
+      {
+       "id": "frame-stutter",
+       "name": "Frame stutter",
+       "live": true
+      },
+      {
+       "id": "pulldown-judder",
+       "name": "Pulldown judder",
+       "live": true
+      },
+      {
+       "id": "rolling-shutter-wobble",
+       "name": "Rolling shutter wobble",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "VHS & tape",
+     "techniques": [
+      {
+       "id": "analog-ghosting",
+       "name": "Analog ghosting",
+       "live": true
+      },
+      {
+       "id": "camcorder-timecode-overlay",
+       "name": "Camcorder timecode overlay",
+       "live": true
+      },
+      {
+       "id": "chroma-bleed",
+       "name": "Chroma bleed",
+       "live": true
+      },
+      {
+       "id": "interlace-combing",
+       "name": "Interlace combing",
+       "live": true
+      },
+      {
+       "id": "tape-wobble",
+       "name": "Tape wobble",
+       "live": true
+      },
+      {
+       "id": "vhs-tracking-bar",
+       "name": "VHS tracking bar",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Water & atmosphere",
+     "techniques": [
+      {
+       "id": "frost",
+       "name": "Frost",
+       "live": true
+      },
+      {
+       "id": "rain-on-glass",
+       "name": "Rain on glass",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Broadcast & data",
+   "count": 111,
+   "subgroups": [
+    {
+     "subgroup": "Annotation",
+     "techniques": [
+      {
+       "id": "arrow-pointer-draw",
+       "name": "Arrow pointer draw",
+       "live": true
+      },
+      {
+       "id": "callout-line-with-label",
+       "name": "Callout line with label",
+       "live": true
+      },
+      {
+       "id": "dimension-line-annotation",
+       "name": "Dimension line annotation",
+       "live": true
+      },
+      {
+       "id": "focus-blur-out",
+       "name": "Focus blur-out",
+       "live": true
+      },
+      {
+       "id": "highlight-circle-draw",
+       "name": "Highlight circle draw",
+       "live": true
+      },
+      {
+       "id": "numbered-hotspot-pins",
+       "name": "Numbered hotspot pins",
+       "live": true
+      },
+      {
+       "id": "spotlight-dim",
+       "name": "Spotlight dim",
+       "live": true
+      },
+      {
+       "id": "strike-through-draw",
+       "name": "Strike-through draw",
+       "live": true
+      },
+      {
+       "id": "underline-swash-draw",
+       "name": "Underline swash draw",
+       "live": true
+      },
+      {
+       "id": "zoom-to-detail-magnifier",
+       "name": "Zoom-to-detail magnifier",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Bumpers & idents",
+     "techniques": [
+      {
+       "id": "light-trail-logo-reveal",
+       "name": "Light-trail logo reveal",
+       "live": true
+      },
+      {
+       "id": "line-draw-logo-reveal",
+       "name": "Line-draw logo reveal",
+       "live": true
+      },
+      {
+       "id": "station-id-bug",
+       "name": "Logo bug",
+       "live": true
+      },
+      {
+       "id": "logo-sting",
+       "name": "Logo sting",
+       "live": true
+      },
+      {
+       "id": "morphing-shape-ident",
+       "name": "Morphing shape ident",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Charts",
+     "techniques": [
+      {
+       "id": "area-fill-sweep",
+       "name": "Area fill sweep",
+       "live": true
+      },
+      {
+       "id": "axis-rescale",
+       "name": "Axis rescale",
+       "live": true
+      },
+      {
+       "id": "bar-chart-race",
+       "name": "Bar chart race",
+       "live": true
+      },
+      {
+       "id": "bar-grow",
+       "name": "Bar grow",
+       "live": true
+      },
+      {
+       "id": "box-plot-draw",
+       "name": "Box plot draw",
+       "live": true
+      },
+      {
+       "id": "bullet-graph-fill",
+       "name": "Bullet graph fill",
+       "live": true
+      },
+      {
+       "id": "candlestick-build",
+       "name": "Candlestick build",
+       "live": true
+      },
+      {
+       "id": "chart-type-morph",
+       "name": "Chart type morph",
+       "live": true
+      },
+      {
+       "id": "chord-diagram-draw",
+       "name": "Chord diagram draw",
+       "live": true
+      },
+      {
+       "id": "force-directed-network-settle",
+       "name": "Force-directed network settle",
+       "live": true
+      },
+      {
+       "id": "funnel-stage-reveal",
+       "name": "Funnel stage reveal",
+       "live": true
+      },
+      {
+       "id": "gantt-bar-build",
+       "name": "Gantt bar build",
+       "live": true
+      },
+      {
+       "id": "gauge-needle-sweep",
+       "name": "Gauge needle sweep",
+       "live": true
+      },
+      {
+       "id": "heatmap-fill",
+       "name": "Heatmap fill",
+       "live": true
+      },
+      {
+       "id": "hexbin-density-build",
+       "name": "Hexbin density build",
+       "live": true
+      },
+      {
+       "id": "line-chart-draw-on",
+       "name": "Line chart draw-on",
+       "live": true
+      },
+      {
+       "id": "parallel-coordinates-draw",
+       "name": "Parallel coordinates draw",
+       "live": true
+      },
+      {
+       "id": "pictogram-counting",
+       "name": "Pictogram counting",
+       "live": true
+      },
+      {
+       "id": "pie-sweep",
+       "name": "Pie sweep",
+       "live": true
+      },
+      {
+       "id": "polar-area-rose",
+       "name": "Polar area rose",
+       "live": true
+      },
+      {
+       "id": "radar-chart-fill",
+       "name": "Radar chart fill",
+       "live": true
+      },
+      {
+       "id": "ridgeline-ripple",
+       "name": "Ridgeline ripple",
+       "live": true
+      },
+      {
+       "id": "sankey-flow",
+       "name": "Sankey flow",
+       "live": true
+      },
+      {
+       "id": "scatter-plot-point-appear",
+       "name": "Scatter plot point appear",
+       "live": true
+      },
+      {
+       "id": "scatter-time-playback",
+       "name": "Scatter time playback",
+       "live": true
+      },
+      {
+       "id": "series-isolate-highlight",
+       "name": "Series isolate highlight",
+       "live": true
+      },
+      {
+       "id": "slopegraph-reveal",
+       "name": "Slopegraph reveal",
+       "live": true
+      },
+      {
+       "id": "small-multiples-cascade",
+       "name": "Small multiples cascade",
+       "live": true
+      },
+      {
+       "id": "sorted-bar-reorder",
+       "name": "Sorted bar reorder",
+       "live": true
+      },
+      {
+       "id": "sparkline-draw",
+       "name": "Sparkline draw",
+       "live": true
+      },
+      {
+       "id": "stacked-bar-build",
+       "name": "Stacked bar build",
+       "live": true
+      },
+      {
+       "id": "streamgraph-flow",
+       "name": "Streamgraph flow",
+       "live": true
+      },
+      {
+       "id": "sunburst-build",
+       "name": "Sunburst build",
+       "live": true
+      },
+      {
+       "id": "timeline-scroll",
+       "name": "Timeline scroll",
+       "live": true
+      },
+      {
+       "id": "treemap-re-layout",
+       "name": "Treemap re-layout",
+       "live": true
+      },
+      {
+       "id": "waffle-chart-fill",
+       "name": "Waffle chart fill",
+       "live": true
+      },
+      {
+       "id": "waterfall-build",
+       "name": "Waterfall build",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Comparisons",
+     "techniques": [
+      {
+       "id": "balance-bar-tug",
+       "name": "Balance bar tug",
+       "live": true
+      },
+      {
+       "id": "difference-highlight",
+       "name": "Difference highlight",
+       "live": true
+      },
+      {
+       "id": "split-screen-comparison",
+       "name": "Split-screen comparison",
+       "live": true
+      },
+      {
+       "id": "versus-card",
+       "name": "Versus card",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "End cards",
+     "techniques": [
+      {
+       "id": "end-card-with-subscribe-slot",
+       "name": "End card with subscribe slot",
+       "live": true
+      },
+      {
+       "id": "rolling-end-credits",
+       "name": "Rolling end credits",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Explainers",
+     "techniques": [
+      {
+       "id": "isometric-assembly",
+       "name": "Isometric assembly",
+       "live": true
+      },
+      {
+       "id": "whiteboard-marker-drawing",
+       "name": "Whiteboard marker drawing",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Lower thirds",
+     "techniques": [
+      {
+       "id": "angled-lower-third",
+       "name": "Angled lower third",
+       "live": true
+      },
+      {
+       "id": "lower-third-slide-in-bar",
+       "name": "Lower third slide-in bar",
+       "live": true
+      },
+      {
+       "id": "two-tier-kicker-and-title-stack",
+       "name": "Two-tier kicker and title stack",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Maps",
+     "techniques": [
+      {
+       "id": "choropleth-fill",
+       "name": "Choropleth fill",
+       "live": true
+      },
+      {
+       "id": "dot-density-map",
+       "name": "Dot density map",
+       "live": true
+      },
+      {
+       "id": "flight-arc",
+       "name": "Flight arc",
+       "live": true
+      },
+      {
+       "id": "flow-map-lines",
+       "name": "Flow map lines",
+       "live": true
+      },
+      {
+       "id": "globe-spin",
+       "name": "Globe spin",
+       "live": true
+      },
+      {
+       "id": "isochrone-expansion",
+       "name": "Isochrone expansion",
+       "live": true
+      },
+      {
+       "id": "location-ripple-pulse",
+       "name": "Location ripple pulse",
+       "live": true
+      },
+      {
+       "id": "projection-morph",
+       "name": "Projection morph",
+       "live": true
+      },
+      {
+       "id": "zoom-to-location-map",
+       "name": "Zoom-to-location map",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Process diagrams",
+     "techniques": [
+      {
+       "id": "cycle-diagram-rotation",
+       "name": "Cycle diagram rotation",
+       "live": true
+      },
+      {
+       "id": "decision-tree-branch-growth",
+       "name": "Decision tree branch growth",
+       "live": true
+      },
+      {
+       "id": "flowchart-build",
+       "name": "Flowchart build",
+       "live": true
+      },
+      {
+       "id": "hub-and-spoke-spread",
+       "name": "Hub-and-spoke spread",
+       "live": true
+      },
+      {
+       "id": "milestone-marker-pop",
+       "name": "Milestone marker pop",
+       "live": true
+      },
+      {
+       "id": "org-chart-grow",
+       "name": "Org chart grow",
+       "live": true
+      },
+      {
+       "id": "pyramid-build",
+       "name": "Pyramid build",
+       "live": true
+      },
+      {
+       "id": "quadrant-matrix-reveal",
+       "name": "Quadrant matrix reveal",
+       "live": true
+      },
+      {
+       "id": "step-by-step-process-reveal",
+       "name": "Step-by-step process reveal",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Social media",
+     "techniques": [
+      {
+       "id": "chat-bubble-sequence",
+       "name": "Chat bubble sequence",
+       "live": true
+      },
+      {
+       "id": "comment-pop-up-stack",
+       "name": "Comment pop-up stack",
+       "live": true
+      },
+      {
+       "id": "floating-reaction-emoji",
+       "name": "Floating reaction emoji",
+       "live": true
+      },
+      {
+       "id": "poll-result-bar-fill",
+       "name": "Poll result bar fill",
+       "live": true
+      },
+      {
+       "id": "quote-card-reveal",
+       "name": "Quote card reveal",
+       "live": true
+      },
+      {
+       "id": "subscribe-button-press",
+       "name": "Subscribe button press",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Sports graphics",
+     "techniques": [
+      {
+       "id": "game-clock-countdown",
+       "name": "Game clock countdown",
+       "live": true
+      },
+      {
+       "id": "leaderboard-row-swap",
+       "name": "Leaderboard row swap",
+       "live": true
+      },
+      {
+       "id": "player-movement-trail",
+       "name": "Player movement trail",
+       "live": true
+      },
+      {
+       "id": "player-stat-card",
+       "name": "Player stat card",
+       "live": true
+      },
+      {
+       "id": "score-bug",
+       "name": "Score bug",
+       "live": true
+      },
+      {
+       "id": "team-color-wipe",
+       "name": "Team color wipe",
+       "live": true
+      },
+      {
+       "id": "virtual-first-down-line",
+       "name": "Virtual first-down line",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Stats",
+     "techniques": [
+      {
+       "id": "delta-arrow-badge",
+       "name": "Delta arrow badge",
+       "live": true
+      },
+      {
+       "id": "percentage-fill-bar",
+       "name": "Percentage fill bar",
+       "live": true
+      },
+      {
+       "id": "podium-rise",
+       "name": "Podium rise",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Tickers & banners",
+     "techniques": [
+      {
+       "id": "breaking-news-banner-slam",
+       "name": "Breaking news banner slam",
+       "live": true
+      },
+      {
+       "id": "headline-rotator",
+       "name": "Headline rotator",
+       "live": true
+      },
+      {
+       "id": "news-ticker-crawl",
+       "name": "News ticker crawl",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Timers & indicators",
+     "techniques": [
+      {
+       "id": "live-indicator-pulse",
+       "name": "Live indicator pulse",
+       "live": true
+      },
+      {
+       "id": "stopwatch-count-up",
+       "name": "Stopwatch count-up",
+       "live": true
+      },
+      {
+       "id": "timecode-counter",
+       "name": "Timecode counter",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "Title sequences",
+     "techniques": [
+      {
+       "id": "broadcast-title-card-stinger",
+       "name": "Broadcast title card stinger",
+       "live": true
+      },
+      {
+       "id": "tile-grid-title-reveal",
+       "name": "Tile grid title reveal",
+       "live": true
+      }
+     ]
+    },
+    {
+     "subgroup": "UI walkthroughs",
+     "techniques": [
+      {
+       "id": "click-ripple-indicator",
+       "name": "Click ripple indicator",
+       "live": true
+      },
+      {
+       "id": "cursor-path-animation",
+       "name": "Cursor path animation",
+       "live": true
+      },
+      {
+       "id": "cursor-follow-auto-zoom",
+       "name": "Cursor-follow auto zoom",
+       "live": true
+      },
+      {
+       "id": "device-mockup-slide-in",
+       "name": "Device mockup slide-in",
+       "live": true
+      },
+      {
+       "id": "keystroke-overlay",
+       "name": "Keystroke overlay",
+       "live": true
+      },
+      {
+       "id": "ui-walkthrough-camera-zoom",
+       "name": "UI walkthrough camera zoom",
+       "live": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "Sound & music",
+   "count": 23,
+   "subgroups": [
+    {
+     "subgroup": "Mixing & editing",
+     "techniques": [
+      {
+       "id": "ambience",
+       "name": "Ambience",
+       "live": false
+      },
+      {
+       "id": "ducking",
+       "name": "Ducking",
+       "live": false
+      },
+      {
+       "id": "sound-bridge",
+       "name": "Sound bridge",
+       "live": false
+      },
+      {
+       "id": "stereo-panning",
+       "name": "Stereo panning",
+       "live": false
+      },
+      {
+       "id": "voiceover",
+       "name": "Voiceover",
+       "live": false
+      }
+     ]
+    },
+    {
+     "subgroup": "Music",
+     "techniques": [
+      {
+       "id": "button-ending",
+       "name": "Button ending",
+       "live": false
+      },
+      {
+       "id": "cut-to-the-beat",
+       "name": "Cut to the beat",
+       "live": false
+      },
+      {
+       "id": "music-bed",
+       "name": "Music bed",
+       "live": false
+      },
+      {
+       "id": "stinger",
+       "name": "Musical sting",
+       "live": false
+      },
+      {
+       "id": "silence-drop",
+       "name": "Silence drop",
+       "live": false
+      },
+      {
+       "id": "sonic-logo",
+       "name": "Sonic logo",
+       "live": false
+      },
+      {
+       "id": "music-swell",
+       "name": "Swell",
+       "live": false
+      }
+     ]
+    },
+    {
+     "subgroup": "Sound effects",
+     "techniques": [
+      {
+       "id": "foley",
+       "name": "Foley",
+       "live": false
+      },
+      {
+       "id": "glitch-sound",
+       "name": "Glitch sound",
+       "live": false
+      },
+      {
+       "id": "impact-hit",
+       "name": "Impact hit",
+       "live": false
+      },
+      {
+       "id": "mickey-mousing",
+       "name": "Mickey-mousing",
+       "live": false
+      },
+      {
+       "id": "reverse-cymbal",
+       "name": "Reverse cymbal",
+       "live": false
+      },
+      {
+       "id": "riser",
+       "name": "Riser",
+       "live": false
+      },
+      {
+       "id": "sub-drop",
+       "name": "Sub drop",
+       "live": false
+      },
+      {
+       "id": "success-chime",
+       "name": "Success chime",
+       "live": false
+      },
+      {
+       "id": "typing-sounds",
+       "name": "Typing sounds",
+       "live": false
+      },
+      {
+       "id": "ui-sound-effects",
+       "name": "UI sounds",
+       "live": false
+      },
+      {
+       "id": "whoosh",
+       "name": "Whoosh",
+       "live": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
