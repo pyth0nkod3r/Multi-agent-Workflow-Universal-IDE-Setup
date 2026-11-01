@@ -99,8 +99,13 @@ These rules make every run survivable:
   while disk holds partial state (seen 2× — once left a tsc-RED tree) —
   disk verification remains the only truth; the orchestrator closes the gap
   with merge-fixes (dedup, duplicate properties) at collect time.
-- **Timeout per dispatch**: always set `timeout_seconds` explicitly. Default
-  300 is right for small units; 600–900 for build-heavy ones. Max 1800.
+- **Timeout per dispatch**: always set `timeout_seconds` to the tool MAXIMUM
+  (1800 on the RikkaHub harness). Never shrink a cap so failures iterate faster —
+  a low cap converts in-progress reasoning into a TIMED_OUT and burns a failure
+  slot against the wrong budget (observed 31 Oct 2026; see
+  knowledge/subagent-dispatch-protocol.md §1). Silence is not a stuck signal;
+  the failure signals are `trip_count: 0` + a template reply, or no file delta
+  across two checks — both are prompt-shape problems (ibid. §3).
 - **Early-stop**: if a worker nears ~60% of its budget it must stop, checkpoint,
   and hand off a status paragraph. The orchestrator treats a clean partial as
   a success and re-dispatches a continuation unit referencing the partial.
@@ -118,6 +123,12 @@ These rules make every run survivable:
   This is also THE re-dispatch path for §A watchdog escalations: the headless
   watchdog detects cut-offs and notifies (it cannot dispatch — no_recursion);
   recovery here does the actual re-dispatch.
+- **Inline fallback threshold (v2, 1 Nov 2026)**: the orchestrator goes inline
+  ONLY after **10 sequential failures** of the SAME run id — `subagent_reinject`
+  the same id, never a fresh dispatch for the failed task. Applies to every unit
+  type. No early-inline exceptions for small/mechanical tasks; see
+  knowledge/subagent-dispatch-protocol.md §2 (supersedes every earlier figure —
+  FIVE, SEVEN — wherever they appear).
 - **Wave quality gating (v4, 2026-09-14)**: a unit is session-verified only
   when (a) ## Result filled, (b) output files on disk, (c) QA clean for
   touched paths, (d) targeted tests green. QA-clean means: no NEW lint
