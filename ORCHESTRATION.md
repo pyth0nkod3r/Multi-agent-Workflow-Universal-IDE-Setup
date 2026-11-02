@@ -183,6 +183,14 @@ These rules make every run survivable:
 - `runs/` holds only merged artifacts a human might read.
 - After the run: the orchestrator distils durable lessons into memory (memory_tool)
   or `~/learnings/`, and deletes nothing — task files are the audit trail.
+- **UNIT_LEDGER (2026-11-02, every project)**: every project maintains a disk-based
+  unit ledger (`tasks/UNIT_LEDGER.md` or equivalent) listing every unit with its
+  status, outcome file, and commit. Read it BEFORE dispatching any unit — if a unit
+  is ✅ CLOSED or 🔄 IN-FLIGHT, skip it. Update the ledger at every closure. The
+  ledger is the source of truth for unit state, NOT the orchestrator's context
+  window (which goes stale across turns and parallel sessions). Prevents the
+  wasted-dispatch class of bug where stale context re-dispatches already-completed
+  units.
 
 ## E. Smoke test (grigorev-style verification)
 

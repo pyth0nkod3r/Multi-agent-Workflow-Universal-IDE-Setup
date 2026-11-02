@@ -180,3 +180,9 @@ the workspace overlay `AGENTS.md` "Failure protocol" line carries the 10-failure
 and the max-time rule for machine-specific harness mapping; canonical-first per the repo
 path rule; this file is mirrored byte-identical to
 `Multi-agent-Workflow-Universal-IDE-Setup/knowledge/`.
+
+**UNIT_LEDGER (2026-11-02):** complements §7 — where §7 says disk is the evidence for a
+single unit's deliverable, the project's `tasks/UNIT_LEDGER.md` is the disk-based source
+of truth for *which* units exist and are open/closed across the whole project. Read it
+before dispatching any unit (skip ✅ CLOSED / 🔄 IN-FLIGHT); update at every closure. See
+`ORCHESTRATION.md` §D.
