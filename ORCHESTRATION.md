@@ -56,8 +56,11 @@ decisions; workers execute bounded tasks and report results.
    - a unit already re-dispatched once (by interactive recovery) and failed
      again → escalate to the user, do not loop.
    Record the job name in RUN.md. One-shot jobs self-expire — no cleanup.
-5. **Collect** — read each task file's `## Result`. Blocked/failed units are
-   re-dispatched once with the failure appended; second failure = escalate.
+5. **Collect** — read each task file's `## Result`, but verify the ARTIFACT, not
+   the report: `ls` + `grep -c` the files, apply the anti-vacuous-test check for any
+   test-suite deliverable, and where report and disk disagree the disk wins and the
+   report is void (see knowledge/subagent-dispatch-protocol.md §§4, 7). Blocked/failed
+   units are re-dispatched once with the failure appended; second failure = escalate.
 6. **Critique** — dispatch a `critic` blind: give it the spec paths + output paths,
    never builder identities or the run history. In tournament units the critic
    ranks the variants side by side and names a winner.

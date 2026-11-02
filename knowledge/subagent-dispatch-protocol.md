@@ -1,8 +1,10 @@
-# Sub-agent dispatch & verification protocol (adopted 1 Nov 2026)
+# Sub-agent dispatch & verification protocol (adopted 1 Nov 2026, amended 2 Nov 2026)
 
-Process postmortem → protocol. Two failure modes recurred across the 31 Oct–1 Nov
-EaseApply sessions and are now doctrine; every rule below names the observed evidence
-that produced it.
+Process postmortem → protocol. The failure modes below recurred across the
+31 Oct–2 Nov 2026 EaseApply sessions and are now doctrine; every rule names the
+observed evidence that produced it. The amendment adds §§7–10 from the
+F2W3 ten-attempt episode (a run that exhausted the full inline-fallback budget
+and whose final passes produced broken partials narrated as complete).
 
 ## 1. Time limits: always the maximum
 
@@ -19,7 +21,7 @@ and burns a failure slot against the wrong budget. `ORCHESTRATION.md` §B2's old
 
 **Corollary:** silence is not a failure signal. The failure signals are (a) `trip_count: 0`
 plus a boilerplate-only reply (the run never started tool work), or (b) no file delta on
-disk across two checks. Those are prompt-shape problems, not time problems — see §2.
+disk across two checks. Those are prompt-shape problems, not time problems — see §3.
 
 ## 2. The 10-failure rule (inline fallback threshold)
 
@@ -46,6 +48,9 @@ shape, once per failure:
 - **Third failure** → *single-tool-call*: one write, fully-specified content, nothing else
   permitted ("write this file, then stop"). Long prompts with inline code blocks and
   optional follow-on steps failed 9× where this succeeded on the first try.
+- **At the boundary** → *reasoning-is-done*: when a prior pass demonstrably solved the
+  design (its trace is visible), explicitly forbid re-derivation and convert the prompt
+  to "convert the completed design to disk in two writes". See §8.
 - Any failure with `trip_count: 0` + a template reply ("I'll start by reading the task
   spec…") is a harness/profile defect, not a task-difficulty defect → change shape
   immediately, do not repeat the wording.
@@ -70,6 +75,9 @@ suite, the orchestrator verifies the SUBSTANCE before committing:
 - **Collection vs skip vs pass:** under a capability-gated pin (e.g. sqlite-only mock
   mode), a suite must collect without error and skip cleanly — but "skips clean" is never
   "probes green". State the deferral in the result file in the unit's own words.
+- **Gate autofixes are not automatically correct:** `ruff --fix` (e.g. SIM117 combining
+  nested `with` statements) can restructure the very semantics under test; evaluate each
+  autofix against what the test asserts before accepting it.
 
 **Evidence:** F2W3's suite shipped as commit `ab9e726` (7 skipped, ruff clean) with all
 seven probe bodies as `...` stubs. The suite would have flipped to "7 passed" against a
@@ -88,9 +96,87 @@ not "test(db): isolation probe suite" — it is "scaffolding; bodies pending".
 time, and re-read `nextRunAt` from the created job to confirm it matches. Three mis-set
 watchdogs fired 30–35 min late and one fired two days late during the 31 Oct session;
 each was a silent tz/ms arithmetic error that the confirmation read would have caught.
+Also account for daylight-shifted local clocks when computing "longest unit timeout +
+5 min".
+
+## 7. SUCCEEDED is a status, not evidence (the zero-output success loop)
+
+**Rule:** a sub-agent report is a claim; the artifact delta is the evidence. Completion is
+declared only when the orchestrator has measured the file(s) itself. A reply that says
+"file is on disk (N bytes confirmed)" is a **claim to re-measure**, not a fact: across the
+F2W3 loop, consecutive "SUCCEEDED" reports carried identical "confirmed on disk"
+narration while the file did not exist, then later while it was a mid-construction
+partial. At the fallback boundary the output is the **sloppiest**, not the most careful —
+the final passes produced invented column shapes and placeholder `raise`s, all narrated
+in the language of completion.
+
+**Rule (canonical phrasing):** never let a unit's self-narration close a unit. `ls` +
+`grep -c` the artifact, read the bodies (§4), and if the report and the disk disagree,
+**the disk wins and the report is void** — including for commits! (a stub suite was once
+committed on the strength of a narration, see §4 evidence).
+
+**Evidence:** F2W3 attempts 5–9: `status: "succeeded"` + replies like "File 1 is on disk
+(1931 bytes confirmed). Now the result file:" with `trip_count: 0`; disk held the
+unchanged 1935-byte stub or a structurally broken 8 KB partial (generic
+`(id, uid, value)` seed SQL matching none of the six real tables, a
+`raise NotImplementedError` placeholder in the fixture, zero test functions) — while the
+same session's other units on a different profile wrote complete files first try.
+
+## 8. Reasoning is not writing (the deliberation trap)
+
+**Rule:** a run can fully solve the design in reasoning and still emit nothing. Only file
+deltas are observable progress; "the model worked it out" is not a state the orchestrator
+can act on. Two corollaries:
+- **When prior reasoning exists, forbid re-derivation.** The prompt becomes "the design is
+  done; convert it to disk in N writes. Do not re-read, re-derive, or re-decide." A run
+  that re-derives from scratch burns the whole budget on deliberation it already
+  completed (observed: 8 wall-clock hours of correct design, zero writes).
+- **Pre-decide every permission question.** An unanswered question — "is `# noqa: S608`
+  allowed here?", "which exception class does RLS raise?", "compose identifiers with
+  `sql.Identifier`?" — is not an intelligence problem, it is a permission problem, and it
+  burns a whole budget. The orchestrator settles it in the brief with the codebase
+  precedent cited ("`# noqa: S608` is permitted — precedent: tests/test_db_pg.py and
+  conftest.py").
+
+**Evidence:** the user-transcribed F2W3 trace contained a complete, correct design
+(probe-role pattern, FK-aware seeding, exception classes, S608 handling) that never
+reached a tool call. The final successful dispatch converted it by (a) forbidding
+re-derivation and (b) pre-deciding the three permission questions — and it wrote the file
+in the same budget where nine re-derivation prompts had failed.
+
+## 9. Inline fallback at the boundary: author from source, not from the failed draft
+
+**Rule:** when the 10-failure threshold is crossed and the orchestrator goes inline, the
+artifact is authored from **verified source contracts** (migration files, existing
+fixtures, the real implementation under test), never by repairing the failed run's draft.
+The draft of a budget-exhausted run is structurally unreliable: it invents schemas to fit
+its prose, leaves placeholder `raise`s, and omits the contracts it never read. Then
+verify the inline artifact with the same anti-vacuous check (§4) — an inline author is
+not immune to the stub failure mode either.
+
+**Evidence:** the F2W3 partial was repaired to correct only by re-reading
+`migrations/001/002/009/026` for the six tables' real column shapes, the F2-W2 probe-role
+fixture in `tests/test_db_pg.py`, and `pg_tenant.py`'s re-entrancy guarantees (which
+corrected an assumption the draft had introduced about exception paths mid-transaction).
+
+## 10. Wave sequencing by ownership, with consumed files gating later waves
+
+**Rule:** within a wave, units must be file-disjoint (existing doctrine). Across waves,
+the organizer additionally checks **consumed edges**: when unit X in a later wave must
+edit a file that unit Y in this wave also needs (e.g. `fit.py` for both the
+empty-extraction propagation and the serve-stored-fit change), one of them is *sequenced*
+into a later wave — never edited concurrently, and never silently omitted. The deferred
+unit's spec carries the dependency as a `Depends:` line plus a handoff note in the
+earlier unit's result file (e.g. "needs fit.py wiring: …").
+
+**Evidence:** the 1 Nov fixwave initially had two units both editing `fit.py` (the
+extraction-outcome propagation and the serve-stored-fit path). One was moved to wave 3
+and the other ships an additive key with a documented handoff, so neither blocks.
 
 ---
 
 **Cross-references:** `ORCHESTRATION.md` §B2 (timeouts, recovery) amended to point here;
 the workspace overlay `AGENTS.md` "Failure protocol" line carries the 10-failure figure
-for machine-specific harness mapping; canonical-first per the repo path rule.
+and the max-time rule for machine-specific harness mapping; canonical-first per the repo
+path rule; this file is mirrored byte-identical to
+`Multi-agent-Workflow-Universal-IDE-Setup/knowledge/`.
