@@ -81,4 +81,23 @@ need → is a stdlib module enough?             → use it
 _Projects log deliberate departures here, one line each (date · project · dep ·
 reason):_
 
-- (none yet)
+- 2026-11-03 · audit (all Python projects) · no external cache/queue/search/vector/pub-sub software found in any manifest or import — Postgres-universal clause already satisfied; nothing to migrate
+- 2026-11-03 · EaseApply backend · boto3 · AWS S3 client; no stdlib S3 support
+- 2026-11-03 · EaseApply backend · pypdf · PDF parsing/extraction; no stdlib equivalent
+- 2026-11-03 · EaseApply backend · pyyaml · YAML config parsing; no stdlib YAML
+- 2026-11-03 · EaseApply backend · python-multipart · FastAPI file-upload support
+- 2026-11-03 · EaseApply tg-listener · telethon · MTProto Telegram client; no stdlib/first-party alternative
+- 2026-11-03 · EaseApply wa-listener · @whiskeysockets/baileys · WhatsApp Web multi-device protocol client
+- 2026-11-03 · equityscout data · pandas · dataframe ops beyond stdlib csv/json; migration candidate flagged (see register notes)
+- 2026-11-03 · equityscout data · pdfplumber · PDF table extraction; no stdlib equivalent
+- 2026-11-03 · equityscout data · beautifulsoup4 · tolerant HTML parsing; stdlib html.parser insufficient for real-world pages
+- 2026-11-03 · equityscout core · tzdata · zoneinfo database for hosts lacking system tzdata (Windows deploys)
+- 2026-11-03 · clinic-booking-api · express, pg, @electric-sql/pglite · assessment-specified stack; pglite = embedded Postgres for local, consistent with policy
+- 2026-11-03 · web frontends (EaseApply, EquityScout) · React/Vite/Tailwind/Radix(shadcn) stack · UI stack per adopted design-stack doctrine; stdlib-first does not apply to the browser platform the same way
+
+_Register notes:_ framework tier (fastapi, uvicorn, pydantic(+settings), httpx,
+psycopg(+pool), email-validator, pytest, ruff) is the established load-bearing
+base and is not itemized as exceptions; httpx is the mandated HTTP client.
+`pandas` in equityscout/data is the largest remaining footprint item — stdlib
+`csv`/`json` could cover current transforms if the footprint review demands it,
+but no rip-out is planned.
