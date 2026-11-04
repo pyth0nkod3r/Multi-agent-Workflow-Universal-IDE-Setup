@@ -1,4 +1,4 @@
-# Sub-agent dispatch & verification protocol (adopted 1 Nov 2026, amended 2 Nov 2026)
+# Sub-agent dispatch & verification protocol (adopted 1 Nov 2026, amended 2 Nov 2026; §3a fill-stage addendum 3 Nov 2026)
 
 Process postmortem → protocol. The failure modes below recurred across the
 31 Oct–2 Nov 2026 EaseApply sessions and are now doctrine; every rule names the
@@ -59,6 +59,36 @@ shape, once per failure:
 zero files; the single-tool-call prompt wrote the file in one try. Meanwhile identical
 long briefs on a different model profile succeeded — so the prompt shape, not the task,
 was the variable.
+
+## 3a. Fill-stage caps and the honest-FAIL floor (amended 3 Nov 2026)
+
+**Problem observed (3 Nov, EquityScout critic wave):** skeleton-first works — but the
+*fill* stage is its own death mode. Two critic runs wrote the skeleton on call 1, then
+died at trips 12–37 while filling row-by-row with unbounded reads. Separately, a builder
+run TIMED_OUT at the 1800s cap mid-fill with 549 insertions stranded on disk.
+
+**Rule (applies to every rung of the §3 ladder that involves filling a skeleton):**
+1. **Per-item call caps are part of the contract.** State them explicitly in the prompt:
+   one table row or surface per tool call (never batch >2), ≤3 calls per test file, and a
+   total budget ("~12 calls"). Unbounded "fill it all" is what kills the run.
+2. **Open every reinject with the orchestrator's VERIFIED disk state** — files + counts +
+   an explicit do-NOT-redo list ("34 files, 549 insertions on disk; do NOT re-read the
+   spec or re-hook components"). The agent's own account of its progress is not evidence
+   (§7); only the orchestrator's disk check is.
+3. **Honest-FAIL floor:** the contract ends with "if you cannot finish within the budget,
+   write `VERDICT: FAIL` with the reason and mark unfinished rows — an honest FAIL on
+   disk beats a SUCCEEDED with nothing." A FAIL outcome is escalatable by the
+   orchestrator; a missing file is a wasted run.
+4. **`UNVERIFIED` is a legal verdict value for audit fills.** An agent filling from
+   accumulated memory marks un-inspected rows `UNVERIFIED` + what would resolve them —
+   never invented evidence. The orchestrator spot-checks claims afterward (§4).
+
+**Evidence (3 Nov):** design-audit-final died twice at the fill stage (skeleton on disk,
+0 rows filled); the two-call contract (fill-from-memory in one call → ≤2 spot reads →
+verdict, honest-FAIL fallback) bounded it. gate-audit-code died without any file; the
+skeleton-first staged brief wrote the skeleton on call 1. U20 builder: a 900K-token
+read-only death became 549 disk insertions once the reinject opened with the verified
+disk state and forbade re-derivation (§8).
 
 ## 4. Verification: read the bodies, not the gates
 
