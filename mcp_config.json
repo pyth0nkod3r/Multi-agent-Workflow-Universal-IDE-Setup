@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "youdotcom": {
+      "serverUrl": "https://api.you.com/mcp"
+    },
+    "googleStitch": {
+      "serverUrl": "https://stitch.googleapis.com/mcp"
+    },
+    "21stdev": {
+      "serverUrl": "https://21st.dev/api/mcp"
+    },
+    "penpot": {
+      "serverUrl": "https://design.penpot.app/mcp/stream"
+    }
+  }
+}

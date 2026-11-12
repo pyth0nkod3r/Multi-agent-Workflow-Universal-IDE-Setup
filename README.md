@@ -50,8 +50,12 @@ All sub-agents operate under the v4 Code-Quality Gates:
 Multi-agent-Workflow-Universal-IDE-Setup/
 ├── AGENTS.md                  # Durable workspace policies (uv, quality gates, design)
 ├── CONTRACT.md                # Multi-agent triage contract & roster rules
-├── ORCHESTRATION.md            # Wave quality gating & recovery protocol
+├── ORCHESTRATION.md           # Wave quality gating & recovery protocol
 ├── README.md                  # Setup & architecture guide
+├── plugin.json                # Antigravity IDE plugin manifest
+├── mcp_config.json            # Antigravity IDE MCP server configuration
+├── rules/                     # Antigravity IDE always-on rules
+│   └── AGENTS.md
 ├── agents/                    # Canonical 6-role roster prompts (v4 quality floor)
 │   ├── builder.md
 │   ├── critic.md
